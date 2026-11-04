@@ -51,7 +51,7 @@ describe("newGame", () => {
     expect(a.encounters).toHaveLength(3);
     expect(new Set(a.encounters.map(e => e.id)).size).toBe(3);
     expect(a.specialEncounter).toBeNull();
-    expect(a.inventory).toHaveLength(0);
+    expect(a.inventory).toEqual([null, null, null, null, null]);
   });
 });
 
@@ -296,11 +296,22 @@ describe("special encounters (GDD 9.3.1)", () => {
     expect(applyAction(r.state, { type: "TICK" }, ctx(T0 + 2 * H4)).specialEncounter).not.toBeNull();
   });
 
-  it("dismissing rerolls the special in place", () => {
+  it("dismissing empties the slot; the next one waits for the 4h timer", () => {
     let s = { ...newGame("paladin", 2, cfg, T0), playerLevel: 30 };
     s = applyAction(s, { type: "TICK" }, ctx(T0 + H4));
     const old = s.specialEncounter!;
     const r = applyAction(s, { type: "DISMISS_ENCOUNTER", encounterId: old.id }, ctx(T0 + H4 + 1, 9));
+    expect(r.specialEncounter).toBeNull();
+    expect(r.encounters).toEqual(s.encounters);
+    expect(applyAction(r, { type: "TICK" }, ctx(T0 + 2 * H4 - 1)).specialEncounter).toBeNull();
+    expect(applyAction(r, { type: "TICK" }, ctx(T0 + 2 * H4)).specialEncounter).not.toBeNull();
+  });
+
+  it("dismissing a special that waited past the timer lets the next one appear at once", () => {
+    let s = { ...newGame("paladin", 2, cfg, T0), playerLevel: 30 };
+    s = applyAction(s, { type: "TICK" }, ctx(T0 + H4));
+    const old = s.specialEncounter!;
+    const r = applyAction(s, { type: "DISMISS_ENCOUNTER", encounterId: old.id }, ctx(T0 + 3 * H4, 9));
     expect(r.specialEncounter).not.toBeNull();
     expect(r.specialEncounter!.id).not.toBe(old.id);
   });

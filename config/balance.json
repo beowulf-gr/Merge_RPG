@@ -216,7 +216,7 @@
   "skillCooldownBase": 3600000,
 
   "inventory": {
-    "baseSlots": 0,
+    "baseSlots": 5,
     "maxPurchasable": 10
   },
 

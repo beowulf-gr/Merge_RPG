@@ -11,7 +11,7 @@ UI
 
 Engine
 - Recipes: crafting by dropping one ingredient on the other; recipe items are terminal (`{type: "recipe"}` cells)
-- Special encounters: every 4 h, own slot, 2.5× budget, recipe required, 3× rewards, gated on recipe availability
+- Special encounters: every 4 h from the last appearance, own slot, 2.5× budget, recipe required, 3× rewards, gated on recipe availability; dismissing only empties the slot
 - Selling: `sellPrice` + `SELL_ITEM` (50% normal / 100% recipe, generators unsellable)
 - New `step()` returns `{state, events}`; `DROP_ITEM` handles move/merge/craft/swap
 - RNG state persisted in `GameState.rngState`; deterministic encounter ids
@@ -21,7 +21,6 @@ Fixes to milestone 2/3 code
 - Gold multiplier applied at completion, not baked in at generation
 - Merge-crit no longer fires on generator taps
 - A generator that sat full no longer refills instantly after the next tap
-- Inventory starts at 0 slots (was 5), per CLAUDE.md §6
 - `CR_XP_MAP` read from `balance.json`; recipe validation added to `validateBalance`
 
 ## Milestone 3 — Encounters engine

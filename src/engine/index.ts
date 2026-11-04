@@ -280,9 +280,10 @@ function completeEncounter(state: GameState, encounterId: string, rng: RNG, now:
 
 function dismissEncounter(state: GameState, encounterId: string, rng: RNG, now: number, config: BalanceConfig): GameState {
   if (state.specialEncounter?.id === encounterId) {
-    // Dismissing a special encounter rerolls it in place (free, like normal ones).
-    const enc = newSpecial(state, rng, now, config);
-    return { ...state, specialEncounter: enc, nextEncounterId: state.nextEncounterId + (enc ? 1 : 0) };
+    // Dismissing a special encounter just empties its slot. The next one follows the
+    // normal timer (counted from the last appearance), so it can't be rerolled for free.
+    const next = { ...state, specialEncounter: null };
+    return maybeSpawnSpecial(next, rng, now, config, []);
   }
   if (!state.encounters.some(e => e.id === encounterId)) return state;
   const next = { ...state, encounters: state.encounters.filter(e => e.id !== encounterId) };

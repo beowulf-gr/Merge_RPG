@@ -42,7 +42,6 @@
     "sellCancel": "Keep it",
     "sold": "Sold for {gold} Gold",
     "cannotSellGenerator": "Generators can't be sold",
-    "confirmDelete": "Delete this item? You get nothing for it.",
     "encounterComplete": "Encounter complete: +{gold} Gold, +{xp} XP",
     "encounterNotReady": "You don't have all the items yet",
     "newEncounter": "New encounter",

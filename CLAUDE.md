@@ -22,7 +22,7 @@ Read `docs/GDD.md` in full before starting. This file records the **decisions th
 
 - **TypeScript (strict)**, **Vite**, **React 18** for all UI.
 - **Zustand** (or similar small store) for app state that wraps the engine.
-- **Vitest** for unit tests. Use **Playwright** for a few smoke/e2e tests once the UI exists.
+- **Vitest** for unit tests. Add **Playwright** (dev dependency, approved) for a few smoke/e2e tests at milestone 9.
 - Board rendered with DOM/CSS grid + pointer events (drag and drop that works with both mouse and touch). Animations via CSS transitions or Framer Motion. No canvas engine unless performance demands it. 80 cells is fine in DOM.
 - Fonts: **Cinzel** (headings) + **Inter** (body), matching the GDD.
 - Persistence: **local only** (IndexedDB via `idb-keyval`, or localStorage), no backend.
@@ -125,25 +125,24 @@ Where §5.1 and §9.4 of the GDD disagree, **§9.4 (the cost tables) wins** unle
 |---|---|
 | Gold multiplier tiers | 1.25× / 1.5× / 1.75× / 2.0× (per §9.4) |
 | Secondary drop boost | Chain B rate becomes 12% / 15% / 20% for 10%-base gens; for Gen2 (9% base) apply the same deltas (+2/+5/+10 → 11/14/19%). Taken from Chain A. |
-| Tertiary drop boost | **3 tiers** (decided): Gen2 Chain C 3% (500 XP) / 5% (1,500 XP) / 7% (4,000 XP). Third tier's value and cost are provisional. Taken from Chain A. |
-| Lucky drop | Base 0%. On success: +2 levels (75%) or +3 levels (25%), clamp to 10. Split is provisional. |
+| Tertiary drop boost | **3 tiers** (decided): Gen2 Chain C 3% (500 XP) / 5% (1,500 XP) / 7% (4,000 XP). Taken from Chain A. |
+| Lucky drop | Base 0%. On success: +2 levels (75%) or +3 levels (25%), clamp to 10. Decided. |
 | Generator recharge | Continuous: one charge every `fullRechargeTime / baseCapacity` (Gen1 = 18s). Capacity upgrades raise the cap but keep the same per-charge interval. Cooldown reduction shortens the interval. |
 | Offline progress | On load, advance all timers by elapsed real time (charges, skill cooldown, daily shop reset). Clamp negative/huge clock jumps sensibly. |
 | Tap with full board | Nothing spawns and no charge is consumed. Show feedback. |
 | Spawn position | Nearest empty cell to the generator (BFS). |
 | Generator upgrade costs | Same table (§9.4) for every generator. |
-| Inventory | Starts at 0 slots; up to 10 purchasable. Items in inventory count for encounter fulfilment. |
-| Deleting items | Allowed with confirmation, no reward. (GDD silent, confirm with Vassilis.) |
+| Inventory | 5 base slots from the start; up to 10 more purchasable (15 total, GDD 5.1/9.4). Items in inventory count for encounter fulfilment. |
 | Paladin Taunt | Adds 5 extra encounters above the slot cap; they stay until completed or dismissed and are not replaced. |
 | Rogue Execute | Player picks one active encounter; it completes with full rewards, no items consumed. |
 | Cleric Revitalize | All generators instantly refill to max charges. |
 | Wizard Time Warp | Advances all generator recharge by 4 hours (does not affect skill cooldown or shop). |
 | Bard Buff | Player selects up to 10 items (not generators, not L10, not recipe items); each gains +1 level. |
-| Class choice | Picked at first launch; can be changed later in Settings (cosmetic only, nothing resets). Confirm with Vassilis. |
-| Daily Shop | 6 offers of random L1/L2 items from unlocked chains, each buyable once per day, resets at local midnight. Provisional. |
+| Class choice | Picked at first launch; can be changed later in Settings (cosmetic only, nothing resets). The Settings change must show a strong warning that all item/generator names and visuals will change. |
+| Daily Shop | 6 offers of random L1/L2 items from unlocked chains, each buyable once per day, resets at local midnight. Decided. |
 | Castle | Upgrades within a tier bought in listed order; tier N+1 unlocks when tier N is complete. Needs a castle screen showing progress (placeholder art). |
 | Cross-chain recipes | See §6a. |
-| Selling items | Any board item can be sold to a merchant with a confirm dialog (GDD 5.3). Normal items: `floor(0.5 × max(10, CR_XP/5))` (L1 = 5, L4 = 20, L8 = 180). Recipe items: 100% of their value. Generators can't be sold. Gold multiplier does not apply. Fractions in `balance.json` → `selling`. |
+| Selling items | Replaces deleting (there is no delete action). Any board item can be sold to a merchant with a confirm dialog (GDD 5.3). Normal items: `floor(0.5 × max(10, CR_XP/5))` (L1 = 5, L4 = 20, L8 = 180). Recipe items: 100% of their value. Generators can't be sold. Gold multiplier does not apply. Fractions in `balance.json` → `selling`. |
 | Save data | Versioned schema with migrations; autosave on every action (debounced). Add export/import save as JSON in Settings. |
 
 ## 6a. Recipes and special encounters (GDD 9.3.1)
@@ -151,7 +150,7 @@ Where §5.1 and §9.4 of the GDD disagree, **§9.4 (the cost tables) wins** unle
 - **Crafting:** drag one ingredient onto the other (either direction, exact generator/chain/level) → both are consumed and a recipe item appears in the target cell. Recipe items can't be merged, buffed by the Bard, or used in normal encounters.
 - **Ingredients** live in `balance.json` → `recipes`, identical for all classes (names per class in `items.json`). Current ingredient chains are placeholders and stay flagged `"placeholder": true` until Vassilis supplies the real ones and more recipes.
 - **Recipe value** = sum of the ingredients' CR XP (L6 + L5 = 700 + 450 = 1,150). Sell price = `max(10, value/5)` Gold (100%).
-- **Special encounters:** one every 4 h of real time (also offline), at most one waiting, in their own dedicated slot. Difficulty rolled as normal, XP budget = 2.5 × normal. One available recipe item is required (its value counts toward the budget); normal items fill the rest. Rewards = 3 × the normal formula (Gold multiplier still applies to Gold).
+- **Special encounters:** one every 4 h of real time (also offline), counted from the last appearance; at most one waiting, in their own dedicated slot. Dismissing one only empties the slot (no free replacement); the next follows the timer. Difficulty rolled as normal, XP budget = 2.5 × normal. One available recipe item is required (its value counts toward the budget); normal items fill the rest. Rewards = 3 × the normal formula (Gold multiplier still applies to Gold). Early specials can be recipe-only (the recipe alone exceeds the budget), paying 3× its sell price: intended.
 - **Availability:** a recipe is available once all its ingredients' generators/chains are unlocked. If none is, no special encounter spawns.
 - Engine side is done (milestone 4). The special-encounter UI is milestone 10.
 
@@ -172,7 +171,7 @@ Anything marked *provisional* or *ask*: implement it behind config, list it in `
 6. **Class skills** with cooldowns + UI (incl. Bard multi-select).
 7. **Castle** gold sink screen.
 8. **Persistence + offline progress**, settings (class change, export/import, reset).
-9. **Polish:** animations, sounds hooks, responsive/mobile pass, PWA manifest.
+9. **Polish:** animations, sounds hooks, responsive/mobile pass, PWA manifest, Playwright smoke tests.
 10. Special-encounter UI (engine already implemented, see §6a).
 
 ## 9. Commands

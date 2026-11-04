@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ItemsContent",
+  "type": "object",
+  "required": ["ui", "classes"],
+  "properties": {
+    "ui": {
+      "type": "object",
+      "description": "UI string tokens for localization"
+    },
+    "classes": {
+      "type": "object",
+      "required": ["paladin", "rogue", "cleric", "wizard", "bard"],
+      "additionalProperties": false,
+      "properties": {
+        "paladin": { "$ref": "#/definitions/classEntry" },
+        "rogue":   { "$ref": "#/definitions/classEntry" },
+        "cleric":  { "$ref": "#/definitions/classEntry" },
+        "wizard":  { "$ref": "#/definitions/classEntry" },
+        "bard":    { "$ref": "#/definitions/classEntry" }
+      }
+    }
+  },
+  "definitions": {
+    "itemNameArray": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 10,
+      "maxItems": 10
+    },
+    "gen0Entry": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA"],
+          "additionalProperties": false,
+          "properties": {
+            "ChainA": { "$ref": "#/definitions/itemNameArray" }
+          }
+        }
+      }
+    },
+    "gen1Entry": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA", "ChainB"],
+          "additionalProperties": false,
+          "properties": {
+            "ChainA": { "$ref": "#/definitions/itemNameArray" },
+            "ChainB": { "$ref": "#/definitions/itemNameArray" }
+          }
+        }
+      }
+    },
+    "gen2Entry": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA", "ChainB", "ChainC"],
+          "additionalProperties": false,
+          "properties": {
+            "ChainA": { "$ref": "#/definitions/itemNameArray" },
+            "ChainB": { "$ref": "#/definitions/itemNameArray" },
+            "ChainC": { "$ref": "#/definitions/itemNameArray" }
+          }
+        }
+      }
+    },
+    "gen3Entry": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA"],
+          "additionalProperties": false,
+          "properties": {
+            "ChainA": { "$ref": "#/definitions/itemNameArray" }
+          }
+        }
+      }
+    },
+    "gen4Entry": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA", "ChainB"],
+          "additionalProperties": false,
+          "properties": {
+            "ChainA": { "$ref": "#/definitions/itemNameArray" },
+            "ChainB": { "$ref": "#/definitions/itemNameArray" }
+          }
+        }
+      }
+    },
+    "gen6Entry": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "properties": {
+        "generatorName": { "type": "string", "const": "Wondrous Items" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA"],
+          "additionalProperties": false,
+          "properties": {
+            "ChainA": { "$ref": "#/definitions/itemNameArray" }
+          }
+        }
+      }
+    },
+    "recipeEntry": {
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    },
+    "classEntry": {
+      "type": "object",
+      "required": ["className", "skillName", "skillDescription", "generators", "recipes"],
+      "properties": {
+        "className":         { "type": "string" },
+        "skillName":         { "type": "string" },
+        "skillDescription":  { "type": "string" },
+        "generators": {
+          "type": "object",
+          "required": ["Gen0", "Gen1", "Gen2", "Gen3", "Gen4", "Gen5", "Gen6"],
+          "additionalProperties": false,
+          "properties": {
+            "Gen0": { "$ref": "#/definitions/gen0Entry" },
+            "Gen1": { "$ref": "#/definitions/gen1Entry" },
+            "Gen2": { "$ref": "#/definitions/gen2Entry" },
+            "Gen3": { "$ref": "#/definitions/gen3Entry" },
+            "Gen4": { "$ref": "#/definitions/gen4Entry" },
+            "Gen5": { "$ref": "#/definitions/gen4Entry" },
+            "Gen6": { "$ref": "#/definitions/gen6Entry" }
+          }
+        },
+        "recipes": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/recipeEntry" },
+          "minItems": 2
+        }
+      }
+    }
+  }
+}

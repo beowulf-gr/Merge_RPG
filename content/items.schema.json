@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "items.schema.json",
+  "title": "Items Content Schema",
+  "type": "object",
+  "required": ["ui", "paladin", "rogue", "cleric", "wizard", "bard"],
+  "additionalProperties": false,
+  "properties": {
+    "ui": {
+      "type": "object"
+    },
+    "paladin": { "$ref": "#/definitions/classContent" },
+    "rogue":   { "$ref": "#/definitions/classContent" },
+    "cleric":  { "$ref": "#/definitions/classContent" },
+    "wizard":  { "$ref": "#/definitions/classContent" },
+    "bard":    { "$ref": "#/definitions/classContent" }
+  },
+  "definitions": {
+    "chainOf10": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 10,
+      "maxItems": 10
+    },
+    "gen0": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "additionalProperties": false,
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA"],
+          "additionalProperties": false,
+          "properties": { "ChainA": { "$ref": "#/definitions/chainOf10" } }
+        }
+      }
+    },
+    "gen1": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "additionalProperties": false,
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA", "ChainB"],
+          "additionalProperties": false,
+          "properties": {
+            "ChainA": { "$ref": "#/definitions/chainOf10" },
+            "ChainB": { "$ref": "#/definitions/chainOf10" }
+          }
+        }
+      }
+    },
+    "gen2": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "additionalProperties": false,
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA", "ChainB", "ChainC"],
+          "additionalProperties": false,
+          "properties": {
+            "ChainA": { "$ref": "#/definitions/chainOf10" },
+            "ChainB": { "$ref": "#/definitions/chainOf10" },
+            "ChainC": { "$ref": "#/definitions/chainOf10" }
+          }
+        }
+      }
+    },
+    "gen3": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "additionalProperties": false,
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA"],
+          "additionalProperties": false,
+          "properties": { "ChainA": { "$ref": "#/definitions/chainOf10" } }
+        }
+      }
+    },
+    "gen4": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "additionalProperties": false,
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA", "ChainB"],
+          "additionalProperties": false,
+          "properties": {
+            "ChainA": { "$ref": "#/definitions/chainOf10" },
+            "ChainB": { "$ref": "#/definitions/chainOf10" }
+          }
+        }
+      }
+    },
+    "gen5": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "additionalProperties": false,
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA", "ChainB"],
+          "additionalProperties": false,
+          "properties": {
+            "ChainA": { "$ref": "#/definitions/chainOf10" },
+            "ChainB": { "$ref": "#/definitions/chainOf10" }
+          }
+        }
+      }
+    },
+    "gen6": {
+      "type": "object",
+      "required": ["generatorName", "chains"],
+      "additionalProperties": false,
+      "properties": {
+        "generatorName": { "type": "string" },
+        "chains": {
+          "type": "object",
+          "required": ["ChainA"],
+          "additionalProperties": false,
+          "properties": { "ChainA": { "$ref": "#/definitions/chainOf10" } }
+        }
+      }
+    },
+    "classContent": {
+      "type": "object",
+      "required": ["className", "skillName", "skillDescription", "generators", "recipes"],
+      "additionalProperties": false,
+      "properties": {
+        "className":        { "type": "string" },
+        "skillName":        { "type": "string" },
+        "skillDescription": { "type": "string" },
+        "generators": {
+          "type": "object",
+          "required": ["Gen0", "Gen1", "Gen2", "Gen3", "Gen4", "Gen5", "Gen6"],
+          "additionalProperties": false,
+          "properties": {
+            "Gen0": { "$ref": "#/definitions/gen0" },
+            "Gen1": { "$ref": "#/definitions/gen1" },
+            "Gen2": { "$ref": "#/definitions/gen2" },
+            "Gen3": { "$ref": "#/definitions/gen3" },
+            "Gen4": { "$ref": "#/definitions/gen4" },
+            "Gen5": { "$ref": "#/definitions/gen5" },
+            "Gen6": { "$ref": "#/definitions/gen6" }
+          }
+        },
+        "recipes": {
+          "type": "object",
+          "required": ["recipe1", "recipe2"],
+          "additionalProperties": false,
+          "properties": {
+            "recipe1": { "type": "string" },
+            "recipe2": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

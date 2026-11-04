@@ -1,0 +1,298 @@
+{
+  "generators": {
+    "Gen0": {
+      "fullRechargeTimeMs": 0,
+      "baseCapacity": 0,
+      "infinite": true,
+      "maxItemLevel": 10,
+      "chains": {
+        "ChainA": { "baseDropRate": 1.0 }
+      },
+      "dropsGen1ChainA": true,
+      "upgradeable": false
+    },
+    "Gen1": {
+      "fullRechargeTimeMs": 900000,
+      "baseCapacity": 50,
+      "infinite": false,
+      "maxItemLevel": 10,
+      "chains": {
+        "ChainA": { "baseDropRate": 0.90 },
+        "ChainB": { "baseDropRate": 0.10 }
+      },
+      "upgradeable": true
+    },
+    "Gen2": {
+      "fullRechargeTimeMs": 900000,
+      "baseCapacity": 50,
+      "infinite": false,
+      "maxItemLevel": 10,
+      "chains": {
+        "ChainA": { "baseDropRate": 0.90 },
+        "ChainB": { "baseDropRate": 0.09 },
+        "ChainC": { "baseDropRate": 0.01 }
+      },
+      "upgradeable": true
+    },
+    "Gen3": {
+      "fullRechargeTimeMs": 2700000,
+      "baseCapacity": 30,
+      "infinite": false,
+      "maxItemLevel": 10,
+      "chains": {
+        "ChainA": { "baseDropRate": 1.0 }
+      },
+      "upgradeable": true
+    },
+    "Gen4": {
+      "fullRechargeTimeMs": 2700000,
+      "baseCapacity": 30,
+      "infinite": false,
+      "maxItemLevel": 10,
+      "chains": {
+        "ChainA": { "baseDropRate": 0.90 },
+        "ChainB": { "baseDropRate": 0.10 }
+      },
+      "upgradeable": true
+    },
+    "Gen5": {
+      "fullRechargeTimeMs": 7200000,
+      "baseCapacity": 20,
+      "infinite": false,
+      "maxItemLevel": 10,
+      "chains": {
+        "ChainA": { "baseDropRate": 0.90 },
+        "ChainB": { "baseDropRate": 0.10 }
+      },
+      "upgradeable": true
+    },
+    "Gen6": {
+      "fullRechargeTimeMs": 10800000,
+      "baseCapacity": 15,
+      "infinite": false,
+      "maxItemLevel": 10,
+      "chains": {
+        "ChainA": { "baseDropRate": 1.0 }
+      },
+      "upgradeable": true
+    }
+  },
+
+  "generatorDropLevels": [
+    [{ "level": 1, "weight": 1.0 }],
+    [{ "level": 1, "weight": 0.90 }, { "level": 2, "weight": 0.10 }],
+    [{ "level": 1, "weight": 0.80 }, { "level": 2, "weight": 0.20 }],
+    [{ "level": 1, "weight": 0.60 }, { "level": 2, "weight": 0.40 }],
+    [{ "level": 1, "weight": 0.50 }, { "level": 2, "weight": 0.50 }],
+    [{ "level": 1, "weight": 0.45 }, { "level": 2, "weight": 0.50 }, { "level": 3, "weight": 0.05 }],
+    [{ "level": 1, "weight": 0.43 }, { "level": 2, "weight": 0.47 }, { "level": 3, "weight": 0.10 }],
+    [{ "level": 1, "weight": 0.40 }, { "level": 2, "weight": 0.45 }, { "level": 3, "weight": 0.15 }],
+    [{ "level": 1, "weight": 0.40 }, { "level": 2, "weight": 0.40 }, { "level": 3, "weight": 0.20 }],
+    [{ "level": 1, "weight": 0.35 }, { "level": 2, "weight": 0.40 }, { "level": 3, "weight": 0.23 }, { "level": 4, "weight": 0.02 }]
+  ],
+
+  "upgradeCosts": {
+    "generatorLevel": [0, 100, 250, 500, 1000, 2000, 4000, 8000, 15000, 25000],
+
+    "secondaryDropBoost": {
+      "values": [0.12, 0.15, 0.20],
+      "costs": [300, 800, 2000]
+    },
+
+    "tertiaryDropBoost": {
+      "values": [0.03, 0.05, 0.07],
+      "costs": [500, 1500, 4000]
+    },
+
+    "luckyDropChance": {
+      "values": [0.02, 0.04, 0.08, 0.15],
+      "costs": [200, 500, 1200, 3000]
+    },
+
+    "goldMultiplier": {
+      "values": [1.25, 1.50, 1.75, 2.00],
+      "costs": [400, 1000, 2500, 5000]
+    },
+
+    "encounterSlots": {
+      "costs": [250, 750, 2000, 5000]
+    },
+
+    "skillCooldownReduction": {
+      "minuteValues": [50, 40, 30],
+      "costs": [500, 1500, 4000]
+    },
+
+    "generatorCooldownReduction": {
+      "percentValues": [0.05, 0.10, 0.20],
+      "costs": [1000, 3000, 8000]
+    },
+
+    "inventorySlots": {
+      "costs": [100, 200, 400, 800, 1600, 3200, 6400, 12000, 20000, 35000]
+    },
+
+    "mergeCritChance": {
+      "values": [0.01, 0.02, 0.03, 0.04, 0.05, 0.06],
+      "costs": [300, 800, 1500, 3000, 5000, 10000]
+    },
+
+    "capacityBoost": {
+      "multipliers": [1.10, 1.20, 1.30, 1.50, 1.75, 2.00],
+      "costs": [400, 1000, 2000, 4000, 8000, 15000]
+    },
+
+    "dailyShop": {
+      "level1Cost": 10,
+      "level2Cost": 25
+    }
+  },
+
+  "luckyDrop": {
+    "plusTwoChance": 0.75,
+    "plusThreeChance": 0.25
+  },
+
+  "goldMultipliers": [1.25, 1.50, 1.75, 2.00],
+
+  "encounterSlots": {
+    "base": 3,
+    "max": 7
+  },
+
+  "encounterGeneration": {
+    "xpBudgetBase": 50,
+    "xpBudgetPerLevel": 30,
+    "difficulties": ["Easy", "Medium", "Hard", "Deadly"],
+    "difficultyWeights": [20, 40, 30, 10],
+    "difficultyMultipliers": {
+      "Easy": 0.75,
+      "Medium": 1.0,
+      "Hard": 1.5,
+      "Deadly": 2.0
+    },
+    "CR_XP_MAP": {
+      "1": 25, "2": 50, "3": 100, "4": 200, "5": 450,
+      "6": 700, "7": 1100, "8": 1800, "9": 2300, "10": 2900
+    },
+    "maxItemLevelFormula": "min(10, max(1, floor(playerLevel / 5) + 2))",
+    "rewardGoldFormula": "max(10, floor(actualXp / 5))",
+    "rewardXpFormula": "max(2, floor(actualXp / 20))"
+  },
+
+  "gating": {
+    "1":  [
+      { "gen": "Gen1", "chain": "ChainA" },
+      { "gen": "Gen1", "chain": "ChainB" },
+      { "gen": "Gen2", "chain": "ChainA" },
+      { "gen": "Gen2", "chain": "ChainB" }
+    ],
+    "3":  [{ "gen": "Gen3", "chain": "ChainA" }],
+    "6":  [
+      { "gen": "Gen4", "chain": "ChainA" },
+      { "gen": "Gen4", "chain": "ChainB" }
+    ],
+    "10": [
+      { "gen": "Gen5", "chain": "ChainA" },
+      { "gen": "Gen5", "chain": "ChainB" },
+      { "gen": "Gen2", "chain": "ChainC" }
+    ],
+    "15": [{ "gen": "Gen6", "chain": "ChainA" }],
+    "20": []
+  },
+
+  "minChainRequestWeight": 0.01,
+
+  "generatorRequestWeights": {
+    "Gen0": 1.0,
+    "Gen1": 1.0,
+    "Gen2": 1.0,
+    "Gen3": 1.0,
+    "Gen4": 1.0,
+    "Gen5": 1.0,
+    "Gen6": 1.0
+  },
+
+  "skillCooldownBase": 3600000,
+
+  "inventory": {
+    "baseSlots": 5,
+    "maxPurchasable": 10
+  },
+
+  "grid": {
+    "cols": 8,
+    "rows": 10
+  },
+
+  "castle": {
+    "tier1": {
+      "name": "Restoration",
+      "upgrades": [
+        { "name": "Clear Courtyard Rubble", "cost": 50 },
+        { "name": "Mend the Wooden Gates", "cost": 150 },
+        { "name": "Repair Basic Curtain Wall", "cost": 300 },
+        { "name": "Rebuild the Peasant Barracks", "cost": 600 },
+        { "name": "Restore the Well", "cost": 800 }
+      ]
+    },
+    "tier2": {
+      "name": "Expansion",
+      "upgrades": [
+        { "name": "Construct the Blacksmith's Forge", "cost": 1500 },
+        { "name": "Build the Royal Stables", "cost": 2500 },
+        { "name": "Pave the Main Courtyard", "cost": 4000 },
+        { "name": "Establish the Merchant Marketplace", "cost": 6000 },
+        { "name": "Erect the Watchtowers", "cost": 8500 }
+      ]
+    },
+    "tier3": {
+      "name": "Luxury",
+      "upgrades": [
+        { "name": "Upgrade to Iron Portcullis", "cost": 12000 },
+        { "name": "Plant the Royal Gardens", "cost": 18000 },
+        { "name": "Construct the Grand Feasting Hall", "cost": 25000 },
+        { "name": "Lay Marble Courtyards", "cost": 35000 },
+        { "name": "Furnish the Luxury Throne Room", "cost": 50000 }
+      ]
+    },
+    "tier4": {
+      "name": "Magical Defenses",
+      "upgrades": [
+        { "name": "Inscribe Rune Wards on Walls", "cost": 75000 },
+        { "name": "Summon the Enchanted Arcane Moat", "cost": 100000 },
+        { "name": "Raise the Floating Wizard's Tower", "cost": 150000 },
+        { "name": "Install the Portal Hub", "cost": 250000 },
+        { "name": "Awaken the Guardian Golem", "cost": 500000 }
+      ]
+    }
+  },
+
+  "selling": {
+    "normalItemFraction": 0.5,
+    "recipeItemFraction": 1.0
+  },
+
+  "recipes": [
+    {
+      "id": "recipe1",
+      "ingredients": [
+        { "generator": "Gen1", "chain": "ChainA", "level": 6 },
+        { "generator": "Gen4", "chain": "ChainA", "level": 5 }
+      ]
+    },
+    {
+      "id": "recipe2",
+      "ingredients": [
+        { "generator": "Gen3", "chain": "ChainA", "level": 8 },
+        { "generator": "Gen5", "chain": "ChainA", "level": 4 }
+      ]
+    }
+  ],
+
+  "specialEncounter": {
+    "intervalMs": 14400000,
+    "xpBudgetMultiplier": 2.5,
+    "rewardMultiplier": 3
+  }
+}

@@ -276,6 +276,7 @@
   "recipes": [
     {
       "id": "recipe1",
+      "placeholder": true,
       "ingredients": [
         { "generator": "Gen1", "chain": "ChainA", "level": 6 },
         { "generator": "Gen4", "chain": "ChainA", "level": 5 }
@@ -283,6 +284,7 @@
     },
     {
       "id": "recipe2",
+      "placeholder": true,
       "ingredients": [
         { "generator": "Gen3", "chain": "ChainA", "level": 8 },
         { "generator": "Gen5", "chain": "ChainA", "level": 4 }

@@ -1,5 +1,28 @@
 # Changelog
 
+## Milestone 4 — Playable board UI + recipes/selling engine
+
+UI
+- Class selection screen; HUD (Gold, XP, Level); order board with per-item progress, Complete/Dismiss
+- 8×10 board with pointer-event drag & drop (mouse + touch), tap generators to spawn, selection panel with live charge countdown
+- Sell-to-merchant confirm dialog; toasts for board full / no charges / crits / crafting / sales
+- Fallback tiles coloured by generator showing chain letter + level; recipe tiles in gold
+- `src/ui/content.ts`: all names via `getDisplay` / `items.json`; `src/store/gameStore.ts` (zustand) bridges engine ↔ UI with a 1 s tick
+
+Engine
+- Recipes: crafting by dropping one ingredient on the other; recipe items are terminal (`{type: "recipe"}` cells)
+- Special encounters: every 4 h from the last appearance, own slot, 2.5× budget, recipe required, 3× rewards, gated on recipe availability; dismissing only empties the slot
+- Selling: `sellPrice` + `SELL_ITEM` (50% normal / 100% recipe, generators unsellable)
+- New `step()` returns `{state, events}`; `DROP_ITEM` handles move/merge/craft/swap
+- RNG state persisted in `GameState.rngState`; deterministic encounter ids
+
+Fixes to milestone 2/3 code
+- Encounter completion now checks and consumes the required items (board, then inventory)
+- Gold multiplier applied at completion, not baked in at generation
+- Merge-crit no longer fires on generator taps
+- A generator that sat full no longer refills instantly after the next tap
+- `CR_XP_MAP` read from `balance.json`; recipe validation added to `validateBalance`
+
 ## Milestone 3 — Encounters engine
 
 - Ported `enounter_generator.py` to `src/engine/encounters.ts` with identical maths

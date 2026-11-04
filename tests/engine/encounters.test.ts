@@ -136,10 +136,7 @@ describe("generateEncounter", () => {
   });
 
   it("at player level 15, Gen6 chain A appears", () => {
-    const rng = mulberry32(99);
-    const upgrades = defaultUpgrades();
     const unlockedPairs = getUnlockedGeneratorsAndChains(15, cfg);
-    const dropRates = computeCurrentDropRates(upgrades, cfg);
 
     const hasGen6 = unlockedPairs.some(p => p.gen === "Gen6");
     expect(hasGen6).toBe(true);

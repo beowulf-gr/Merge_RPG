@@ -142,8 +142,18 @@ Where §5.1 and §9.4 of the GDD disagree, **§9.4 (the cost tables) wins** unle
 | Class choice | Picked at first launch; can be changed later in Settings (cosmetic only, nothing resets). Confirm with Vassilis. |
 | Daily Shop | 6 offers of random L1/L2 items from unlocked chains, each buyable once per day, resets at local midnight. Provisional. |
 | Castle | Upgrades within a tier bought in listed order; tier N+1 unlocks when tier N is complete. Needs a castle screen showing progress (placeholder art). |
-| Cross-chain recipes | Dragging the two required items together (e.g. `Gen1_L6` + `Gen4_L5`, any chain? **ask**) crafts a terminal, unmergeable recipe item. **What recipe items are used for is undefined in the GDD. Implement crafting + data, then ask Vassilis before wiring them into encounters or rewards.** |
+| Cross-chain recipes | See §6a. |
+| Selling items | Any board item can be sold to a merchant with a confirm dialog (GDD 5.3). Normal items: `floor(0.5 × max(10, CR_XP/5))` (L1 = 5, L4 = 20, L8 = 180). Recipe items: 100% of their value. Generators can't be sold. Gold multiplier does not apply. Fractions in `balance.json` → `selling`. |
 | Save data | Versioned schema with migrations; autosave on every action (debounced). Add export/import save as JSON in Settings. |
+
+## 6a. Recipes and special encounters (GDD 9.3.1)
+
+- **Crafting:** drag one ingredient onto the other (either direction, exact generator/chain/level) → both are consumed and a recipe item appears in the target cell. Recipe items can't be merged, buffed by the Bard, or used in normal encounters.
+- **Ingredients** live in `balance.json` → `recipes`, identical for all classes (names per class in `items.json`). Current ingredient chains are placeholders and stay flagged `"placeholder": true` until Vassilis supplies the real ones and more recipes.
+- **Recipe value** = sum of the ingredients' CR XP (L6 + L5 = 700 + 450 = 1,150). Sell price = `max(10, value/5)` Gold (100%).
+- **Special encounters:** one every 4 h of real time (also offline), at most one waiting, in their own dedicated slot. Difficulty rolled as normal, XP budget = 2.5 × normal. One available recipe item is required (its value counts toward the budget); normal items fill the rest. Rewards = 3 × the normal formula (Gold multiplier still applies to Gold).
+- **Availability:** a recipe is available once all its ingredients' generators/chains are unlocked. If none is, no special encounter spawns.
+- Engine side is done (milestone 4). The special-encounter UI is milestone 10.
 
 Anything marked *provisional* or *ask*: implement it behind config, list it in `docs/OPEN_QUESTIONS.md`, and keep going.
 
@@ -157,13 +167,13 @@ Anything marked *provisional* or *ask*: implement it behind config, list it in `
 1. **Scaffold:** Vite + React + TS + Vitest + lint/format. `balance.json` with all GDD numbers, typed loader + validation tests. `items.json` placeholders + schema test.
 2. **Engine core:** RNG/clock, board, generators (drops, recharge), merge, merge-crit. Full unit tests.
 3. **Encounters:** TS port + weighting + gating, rewards, slots. Parity and distribution tests.
-4. **Playable board UI:** grid, drag/drop (touch + mouse), generator taps, order board, currency HUD, class selection screen. Fallback tiles.
+4. **Playable board UI:** grid, drag/drop (touch + mouse), generator taps, order board, currency HUD, class selection screen, sell-to-merchant dialog. Fallback tiles. Recipe crafting + special-encounter engine.
 5. **Progression:** XP upgrade screen (all §9.4 sinks), player level, inventory, daily shop, Gen0 unlock.
 6. **Class skills** with cooldowns + UI (incl. Bard multi-select).
 7. **Castle** gold sink screen.
 8. **Persistence + offline progress**, settings (class change, export/import, reset).
 9. **Polish:** animations, sounds hooks, responsive/mobile pass, PWA manifest.
-10. Recipes integration (after Vassilis answers the open question).
+10. Special-encounter UI (engine already implemented, see §6a).
 
 ## 9. Commands
 

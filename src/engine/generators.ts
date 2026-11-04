@@ -27,25 +27,50 @@ export function computeCharges(
   if (!gen || gen.infinite) return state;
 
   const maxCharges = computeMaxCharges(state.id, upgradeState, cfg);
-  if (state.charges >= maxCharges) return { ...state, maxCharges };
+  // While full, the recharge clock is held at "now" so the next charge starts
+  // counting only once a charge has been spent.
+  if (state.charges >= maxCharges) return { ...state, maxCharges, lastRechargeTime: now };
 
-  const cooldownReductionTier = upgradeState.generatorCooldownReduction;
-  const reductionFactor = cooldownReductionTier > 0
-    ? cfg.upgradeCosts.generatorCooldownReduction.percentValues![cooldownReductionTier - 1]
-    : 0;
-  const effectiveRechargeTime = gen.fullRechargeTimeMs * (1 - reductionFactor);
-  const perChargeMs = effectiveRechargeTime / gen.baseCapacity;
-
+  const perChargeMs = perChargeIntervalMs(state.id, upgradeState, cfg);
   const elapsed = now - state.lastRechargeTime;
   const gained = Math.floor(elapsed / perChargeMs);
 
   if (gained <= 0) return { ...state, maxCharges };
 
   const newCharges = Math.min(state.charges + gained, maxCharges);
-  const usedMs = gained * perChargeMs;
-  const newLastRecharge = state.lastRechargeTime + usedMs;
+  const newLastRecharge =
+    newCharges >= maxCharges ? now : state.lastRechargeTime + gained * perChargeMs;
 
   return { ...state, charges: newCharges, maxCharges, lastRechargeTime: newLastRecharge };
+}
+
+/** One charge every fullRechargeTime / baseCapacity, shortened by cooldown reduction. */
+export function perChargeIntervalMs(
+  genId: GeneratorId,
+  upgradeState: UpgradeState,
+  cfg: BalanceConfig
+): number {
+  const gen = cfg.generators[genId];
+  const tier = upgradeState.generatorCooldownReduction;
+  const reduction = tier > 0
+    ? cfg.upgradeCosts.generatorCooldownReduction.percentValues![tier - 1]
+    : 0;
+  return (gen.fullRechargeTimeMs * (1 - reduction)) / gen.baseCapacity;
+}
+
+/** Ms until the next charge arrives, or null if full / infinite. */
+export function msUntilNextCharge(
+  state: GeneratorState,
+  now: number,
+  upgradeState: UpgradeState,
+  cfg: BalanceConfig
+): number | null {
+  const gen = cfg.generators[state.id];
+  if (!gen || gen.infinite) return null;
+  const cur = computeCharges(state, now, upgradeState, cfg);
+  if (cur.charges >= cur.maxCharges) return null;
+  const per = perChargeIntervalMs(state.id, upgradeState, cfg);
+  return Math.max(0, cur.lastRechargeTime + per - now);
 }
 
 export function computeCurrentChainRates(

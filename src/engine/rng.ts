@@ -1,14 +1,27 @@
 export type RNG = () => number;
 
-export function mulberry32(seed: number): RNG {
-  let s = seed >>> 0;
-  return function () {
-    s += 0x6d2b79f5;
-    let t = s;
-    t = Math.imul(t ^ (t >>> 15), t | 1);
-    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+export interface StatefulRng {
+  next: RNG;
+  /** Internal state; feed back into createRng to continue the same sequence. */
+  getState(): number;
+}
+
+export function createRng(state: number): StatefulRng {
+  let s = state >>> 0;
+  return {
+    next() {
+      s = (s + 0x6d2b79f5) >>> 0;
+      let t = s;
+      t = Math.imul(t ^ (t >>> 15), t | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    },
+    getState: () => s,
   };
+}
+
+export function mulberry32(seed: number): RNG {
+  return createRng(seed).next;
 }
 
 export function weightedChoice<T>(items: T[], weights: number[], rng: RNG): T {

@@ -25,8 +25,11 @@ export function parseItemKey(key: ItemKey): ItemId {
   };
 }
 
+export type RecipeId = string;
+
 export type CellContent =
   | { type: "item"; item: ItemId }
+  | { type: "recipe"; recipeId: RecipeId }
   | { type: "generator"; generatorId: GeneratorId }
   | null;
 
@@ -40,12 +43,15 @@ export interface GeneratorState {
   upgradeLevel: number;
 }
 
-export interface EncounterItem extends ItemId {}
+export type EncounterItem = ItemId;
 
 export interface Encounter {
   id: string;
   difficulty: Difficulty;
   requiredItems: EncounterItem[];
+  /** Special encounters only: the recipe item that must be handed in. */
+  requiredRecipe?: RecipeId;
+  /** Base rewards. The Gold multiplier upgrade is applied at completion time. */
   rewards: { gold: number; xp: number };
   isSpecial: boolean;
   createdAt: number;
@@ -69,6 +75,8 @@ export interface GameState {
   grid: Grid;
   generators: Record<GeneratorId, GeneratorState>;
   encounters: Encounter[];
+  /** Dedicated special-encounter slot (GDD 9.3.1). At most one waiting. */
+  specialEncounter: Encounter | null;
   inventory: (ItemId | null)[];
   gold: number;
   xp: number;
@@ -79,4 +87,8 @@ export interface GameState {
   lastSpecialEncounterAt: number;
   dailyShopResetAt: number;
   rngSeed: number;
+  /** Current PRNG state, advanced by every action so play is reproducible. */
+  rngState: number;
+  /** Counter for deterministic encounter ids. */
+  nextEncounterId: number;
 }

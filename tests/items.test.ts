@@ -1,75 +1,51 @@
-import { describe, it, expect } from 'vitest';
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
-import Ajv from 'ajv';
+import { describe, it, expect } from "vitest";
+import Ajv from "ajv";
+import schema from "../content/items.schema.json";
+import items from "../content/items.json";
 
-const itemsPath  = resolve(__dirname, '../content/items.json');
-const schemaPath = resolve(__dirname, '../content/items.schema.json');
-const items  = JSON.parse(readFileSync(itemsPath,  'utf-8'));
-const schema = JSON.parse(readFileSync(schemaPath, 'utf-8'));
+const ajv = new Ajv({ strict: true });
+const validate = ajv.compile(schema);
 
-const ajv = new Ajv({ strict: false });
-
-describe('items.json schema validation', () => {
-  it('validates against items.schema.json', () => {
-    const validate = ajv.compile(schema);
+describe("items.json validation", () => {
+  it("validates against items.schema.json", () => {
     const valid = validate(items);
-    if (!valid) console.error(ajv.errorsText(validate.errors));
+    if (!valid) {
+      console.error(ajv.errorsText(validate.errors));
+    }
     expect(valid).toBe(true);
   });
-});
 
-describe('items.json completeness', () => {
-  const classes = ['paladin', 'rogue', 'cleric', 'wizard', 'bard'];
-  const genChains: Record<string, string[]> = {
-    Gen0: ['ChainA'],
-    Gen1: ['ChainA', 'ChainB'],
-    Gen2: ['ChainA', 'ChainB', 'ChainC'],
-    Gen3: ['ChainA'],
-    Gen4: ['ChainA', 'ChainB'],
-    Gen5: ['ChainA', 'ChainB'],
-    Gen6: ['ChainA'],
-  };
+  const classes = ["paladin", "rogue", "cleric", "wizard", "bard"] as const;
 
   for (const cls of classes) {
-    describe(`class: ${cls}`, () => {
-      it('has className, skillName, skillDescription', () => {
-        const c = items.classes[cls];
-        expect(typeof c.className).toBe('string');
-        expect(typeof c.skillName).toBe('string');
-        expect(typeof c.skillDescription).toBe('string');
-      });
+    it(`${cls}: Gen6 is named "Wondrous Items"`, () => {
+      const classData = (items as Record<string, { generators: Record<string, { generatorName: string }> }>)[cls];
+      expect(classData.generators["Gen6"].generatorName).toBe("Wondrous Items");
+    });
 
-      for (const [gen, chains] of Object.entries(genChains)) {
-        it(`has generator ${gen}`, () => {
-          expect(items.classes[cls].generators).toHaveProperty(gen);
-        });
-
-        for (const chain of chains) {
-          it(`has ${gen} ${chain} with 10 items`, () => {
-            const chainItems = items.classes[cls].generators[gen].chains[chain];
-            expect(Array.isArray(chainItems)).toBe(true);
-            expect(chainItems).toHaveLength(10);
-            for (const name of chainItems) {
-              expect(typeof name).toBe('string');
-              expect(name.length).toBeGreaterThan(0);
-            }
-          });
+    it(`${cls}: all chains have exactly 10 items`, () => {
+      const classData = (items as Record<string, { generators: Record<string, { chains: Record<string, string[]> }> }>)[cls];
+      for (const [genId, gen] of Object.entries(classData.generators)) {
+        for (const [chainId, chain] of Object.entries(gen.chains)) {
+          expect(chain).toHaveLength(10, `${cls} ${genId} ${chainId}`);
         }
       }
+    });
 
-      it('Gen6 generatorName is "Wondrous Items"', () => {
-        expect(items.classes[cls].generators.Gen6.generatorName).toBe('Wondrous Items');
-      });
-
-      it('has at least 2 recipes', () => {
-        expect(items.classes[cls].recipes.length).toBeGreaterThanOrEqual(2);
-      });
+    it(`${cls}: placeholder names are unique across all items`, () => {
+      const classData = (items as Record<string, { generators: Record<string, { chains: Record<string, string[]> }> }>)[cls];
+      const names: string[] = [];
+      for (const gen of Object.values(classData.generators)) {
+        for (const chain of Object.values(gen.chains)) {
+          names.push(...chain);
+        }
+      }
+      const unique = new Set(names);
+      expect(unique.size).toBe(names.length);
     });
   }
 
-  it('has top-level ui block', () => {
-    expect(items).toHaveProperty('ui');
-    expect(typeof items.ui).toBe('object');
+  it("has a ui block", () => {
+    expect((items as Record<string, unknown>).ui).toBeDefined();
   });
 });

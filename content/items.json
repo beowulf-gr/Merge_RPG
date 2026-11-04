@@ -4,617 +4,312 @@
     "mergeItems": "[UI: Merge Items]",
     "completeEncounter": "[UI: Complete Encounter]",
     "dismissEncounter": "[UI: Dismiss Encounter]",
-    "useSkill": "[UI: Use Skill]",
-    "upgradesTitle": "[UI: Upgrades]",
-    "castleTitle": "[UI: Castle]",
-    "inventoryTitle": "[UI: Inventory]",
-    "shopTitle": "[UI: Daily Shop]",
-    "settingsTitle": "[UI: Settings]",
-    "goldLabel": "[UI: Gold]",
-    "xpLabel": "[UI: XP]",
-    "playerLevelLabel": "[UI: Player Level]",
-    "encounterBoardTitle": "[UI: Order Board]",
-    "classSelectTitle": "[UI: Choose Your Class]",
-    "skillCooldownLabel": "[UI: Skill Cooldown]",
-    "confirmDeleteItem": "[UI: Delete this item? This cannot be undone.]",
-    "confirmSellItem": "[UI: Sell this item for {gold} Gold?]",
-    "boardFullFeedback": "[UI: Board is full!]",
-    "noChargesFeedback": "[UI: No charges available!]",
-    "encounterfulfillableLabel": "[UI: Ready to Complete!]",
-    "specialEncounterLabel": "[UI: Special Encounter!]",
-    "offlineProgressTitle": "[UI: Welcome Back!]",
-    "offlineProgressBody": "[UI: You were away for {time}. {charges} charges generated.]"
+    "orderBoard": "[UI: Order Board]",
+    "gold": "[UI: Gold]",
+    "xp": "[UI: XP]",
+    "playerLevel": "[UI: Player Level]",
+    "inventory": "[UI: Inventory]",
+    "settings": "[UI: Settings]",
+    "castle": "[UI: Castle]",
+    "upgrades": "[UI: Upgrades]",
+    "dailyShop": "[UI: Daily Shop]",
+    "classSkill": "[UI: Class Skill]",
+    "boardFull": "[UI: Board Full]",
+    "noCharges": "[UI: No Charges]",
+    "confirmDelete": "[UI: Confirm Delete]",
+    "encounterComplete": "[UI: Encounter Complete]",
+    "newEncounter": "[UI: New Encounter]",
+    "skillReady": "[UI: Skill Ready]",
+    "genUnlocked": "[UI: Generator Unlocked]"
   },
-  "classes": {
-    "paladin": {
-      "className": "Paladin",
-      "skillName": "Taunt",
-      "skillDescription": "[Paladin Skill: Summons 5 extra encounters above the normal maximum limit.]",
-      "generators": {
-        "Gen0": {
-          "generatorName": "[Paladin Gen0 Name]",
-          "chains": {
-            "ChainA": [
-              "[Paladin Gen0 ChainA L1]", "[Paladin Gen0 ChainA L2]", "[Paladin Gen0 ChainA L3]",
-              "[Paladin Gen0 ChainA L4]", "[Paladin Gen0 ChainA L5]", "[Paladin Gen0 ChainA L6]",
-              "[Paladin Gen0 ChainA L7]", "[Paladin Gen0 ChainA L8]", "[Paladin Gen0 ChainA L9]",
-              "[Paladin Gen0 ChainA L10]"
-            ]
-          }
-        },
-        "Gen1": {
-          "generatorName": "[Paladin Gen1 Name]",
-          "chains": {
-            "ChainA": [
-              "[Paladin Gen1 ChainA L1]", "[Paladin Gen1 ChainA L2]", "[Paladin Gen1 ChainA L3]",
-              "[Paladin Gen1 ChainA L4]", "[Paladin Gen1 ChainA L5]", "[Paladin Gen1 ChainA L6]",
-              "[Paladin Gen1 ChainA L7]", "[Paladin Gen1 ChainA L8]", "[Paladin Gen1 ChainA L9]",
-              "[Paladin Gen1 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Paladin Gen1 ChainB L1]", "[Paladin Gen1 ChainB L2]", "[Paladin Gen1 ChainB L3]",
-              "[Paladin Gen1 ChainB L4]", "[Paladin Gen1 ChainB L5]", "[Paladin Gen1 ChainB L6]",
-              "[Paladin Gen1 ChainB L7]", "[Paladin Gen1 ChainB L8]", "[Paladin Gen1 ChainB L9]",
-              "[Paladin Gen1 ChainB L10]"
-            ]
-          }
-        },
-        "Gen2": {
-          "generatorName": "[Paladin Gen2 Name]",
-          "chains": {
-            "ChainA": [
-              "[Paladin Gen2 ChainA L1]", "[Paladin Gen2 ChainA L2]", "[Paladin Gen2 ChainA L3]",
-              "[Paladin Gen2 ChainA L4]", "[Paladin Gen2 ChainA L5]", "[Paladin Gen2 ChainA L6]",
-              "[Paladin Gen2 ChainA L7]", "[Paladin Gen2 ChainA L8]", "[Paladin Gen2 ChainA L9]",
-              "[Paladin Gen2 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Paladin Gen2 ChainB L1]", "[Paladin Gen2 ChainB L2]", "[Paladin Gen2 ChainB L3]",
-              "[Paladin Gen2 ChainB L4]", "[Paladin Gen2 ChainB L5]", "[Paladin Gen2 ChainB L6]",
-              "[Paladin Gen2 ChainB L7]", "[Paladin Gen2 ChainB L8]", "[Paladin Gen2 ChainB L9]",
-              "[Paladin Gen2 ChainB L10]"
-            ],
-            "ChainC": [
-              "[Paladin Gen2 ChainC L1]", "[Paladin Gen2 ChainC L2]", "[Paladin Gen2 ChainC L3]",
-              "[Paladin Gen2 ChainC L4]", "[Paladin Gen2 ChainC L5]", "[Paladin Gen2 ChainC L6]",
-              "[Paladin Gen2 ChainC L7]", "[Paladin Gen2 ChainC L8]", "[Paladin Gen2 ChainC L9]",
-              "[Paladin Gen2 ChainC L10]"
-            ]
-          }
-        },
-        "Gen3": {
-          "generatorName": "[Paladin Gen3 Name]",
-          "chains": {
-            "ChainA": [
-              "[Paladin Gen3 ChainA L1]", "[Paladin Gen3 ChainA L2]", "[Paladin Gen3 ChainA L3]",
-              "[Paladin Gen3 ChainA L4]", "[Paladin Gen3 ChainA L5]", "[Paladin Gen3 ChainA L6]",
-              "[Paladin Gen3 ChainA L7]", "[Paladin Gen3 ChainA L8]", "[Paladin Gen3 ChainA L9]",
-              "[Paladin Gen3 ChainA L10]"
-            ]
-          }
-        },
-        "Gen4": {
-          "generatorName": "[Paladin Gen4 Name]",
-          "chains": {
-            "ChainA": [
-              "[Paladin Gen4 ChainA L1]", "[Paladin Gen4 ChainA L2]", "[Paladin Gen4 ChainA L3]",
-              "[Paladin Gen4 ChainA L4]", "[Paladin Gen4 ChainA L5]", "[Paladin Gen4 ChainA L6]",
-              "[Paladin Gen4 ChainA L7]", "[Paladin Gen4 ChainA L8]", "[Paladin Gen4 ChainA L9]",
-              "[Paladin Gen4 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Paladin Gen4 ChainB L1]", "[Paladin Gen4 ChainB L2]", "[Paladin Gen4 ChainB L3]",
-              "[Paladin Gen4 ChainB L4]", "[Paladin Gen4 ChainB L5]", "[Paladin Gen4 ChainB L6]",
-              "[Paladin Gen4 ChainB L7]", "[Paladin Gen4 ChainB L8]", "[Paladin Gen4 ChainB L9]",
-              "[Paladin Gen4 ChainB L10]"
-            ]
-          }
-        },
-        "Gen5": {
-          "generatorName": "[Paladin Gen5 Name]",
-          "chains": {
-            "ChainA": [
-              "[Paladin Gen5 ChainA L1]", "[Paladin Gen5 ChainA L2]", "[Paladin Gen5 ChainA L3]",
-              "[Paladin Gen5 ChainA L4]", "[Paladin Gen5 ChainA L5]", "[Paladin Gen5 ChainA L6]",
-              "[Paladin Gen5 ChainA L7]", "[Paladin Gen5 ChainA L8]", "[Paladin Gen5 ChainA L9]",
-              "[Paladin Gen5 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Paladin Gen5 ChainB L1]", "[Paladin Gen5 ChainB L2]", "[Paladin Gen5 ChainB L3]",
-              "[Paladin Gen5 ChainB L4]", "[Paladin Gen5 ChainB L5]", "[Paladin Gen5 ChainB L6]",
-              "[Paladin Gen5 ChainB L7]", "[Paladin Gen5 ChainB L8]", "[Paladin Gen5 ChainB L9]",
-              "[Paladin Gen5 ChainB L10]"
-            ]
-          }
-        },
-        "Gen6": {
-          "generatorName": "Wondrous Items",
-          "chains": {
-            "ChainA": [
-              "[Paladin Gen6 ChainA L1]", "[Paladin Gen6 ChainA L2]", "[Paladin Gen6 ChainA L3]",
-              "[Paladin Gen6 ChainA L4]", "[Paladin Gen6 ChainA L5]", "[Paladin Gen6 ChainA L6]",
-              "[Paladin Gen6 ChainA L7]", "[Paladin Gen6 ChainA L8]", "[Paladin Gen6 ChainA L9]",
-              "[Paladin Gen6 ChainA L10]"
-            ]
-          }
+  "paladin": {
+    "className": "Paladin",
+    "skillName": "Taunt",
+    "skillDescription": "[Paladin Skill: Taunt — Summons 5 extra encounters above the normal maximum limit.]",
+    "generators": {
+      "Gen0": {
+        "generatorName": "[Paladin Gen0 Name]",
+        "chains": {
+          "ChainA": ["[Paladin Gen0 ChainA L1]","[Paladin Gen0 ChainA L2]","[Paladin Gen0 ChainA L3]","[Paladin Gen0 ChainA L4]","[Paladin Gen0 ChainA L5]","[Paladin Gen0 ChainA L6]","[Paladin Gen0 ChainA L7]","[Paladin Gen0 ChainA L8]","[Paladin Gen0 ChainA L9]","[Paladin Gen0 ChainA L10]"]
         }
       },
-      "recipes": [
-        { "id": "recipe1", "name": "[Paladin Recipe1 Name]" },
-        { "id": "recipe2", "name": "[Paladin Recipe2 Name]" }
-      ]
+      "Gen1": {
+        "generatorName": "[Paladin Gen1 Name]",
+        "chains": {
+          "ChainA": ["[Paladin Gen1 ChainA L1]","[Paladin Gen1 ChainA L2]","[Paladin Gen1 ChainA L3]","[Paladin Gen1 ChainA L4]","[Paladin Gen1 ChainA L5]","[Paladin Gen1 ChainA L6]","[Paladin Gen1 ChainA L7]","[Paladin Gen1 ChainA L8]","[Paladin Gen1 ChainA L9]","[Paladin Gen1 ChainA L10]"],
+          "ChainB": ["[Paladin Gen1 ChainB L1]","[Paladin Gen1 ChainB L2]","[Paladin Gen1 ChainB L3]","[Paladin Gen1 ChainB L4]","[Paladin Gen1 ChainB L5]","[Paladin Gen1 ChainB L6]","[Paladin Gen1 ChainB L7]","[Paladin Gen1 ChainB L8]","[Paladin Gen1 ChainB L9]","[Paladin Gen1 ChainB L10]"]
+        }
+      },
+      "Gen2": {
+        "generatorName": "[Paladin Gen2 Name]",
+        "chains": {
+          "ChainA": ["[Paladin Gen2 ChainA L1]","[Paladin Gen2 ChainA L2]","[Paladin Gen2 ChainA L3]","[Paladin Gen2 ChainA L4]","[Paladin Gen2 ChainA L5]","[Paladin Gen2 ChainA L6]","[Paladin Gen2 ChainA L7]","[Paladin Gen2 ChainA L8]","[Paladin Gen2 ChainA L9]","[Paladin Gen2 ChainA L10]"],
+          "ChainB": ["[Paladin Gen2 ChainB L1]","[Paladin Gen2 ChainB L2]","[Paladin Gen2 ChainB L3]","[Paladin Gen2 ChainB L4]","[Paladin Gen2 ChainB L5]","[Paladin Gen2 ChainB L6]","[Paladin Gen2 ChainB L7]","[Paladin Gen2 ChainB L8]","[Paladin Gen2 ChainB L9]","[Paladin Gen2 ChainB L10]"],
+          "ChainC": ["[Paladin Gen2 ChainC L1]","[Paladin Gen2 ChainC L2]","[Paladin Gen2 ChainC L3]","[Paladin Gen2 ChainC L4]","[Paladin Gen2 ChainC L5]","[Paladin Gen2 ChainC L6]","[Paladin Gen2 ChainC L7]","[Paladin Gen2 ChainC L8]","[Paladin Gen2 ChainC L9]","[Paladin Gen2 ChainC L10]"]
+        }
+      },
+      "Gen3": {
+        "generatorName": "[Paladin Gen3 Name]",
+        "chains": {
+          "ChainA": ["[Paladin Gen3 ChainA L1]","[Paladin Gen3 ChainA L2]","[Paladin Gen3 ChainA L3]","[Paladin Gen3 ChainA L4]","[Paladin Gen3 ChainA L5]","[Paladin Gen3 ChainA L6]","[Paladin Gen3 ChainA L7]","[Paladin Gen3 ChainA L8]","[Paladin Gen3 ChainA L9]","[Paladin Gen3 ChainA L10]"]
+        }
+      },
+      "Gen4": {
+        "generatorName": "[Paladin Gen4 Name]",
+        "chains": {
+          "ChainA": ["[Paladin Gen4 ChainA L1]","[Paladin Gen4 ChainA L2]","[Paladin Gen4 ChainA L3]","[Paladin Gen4 ChainA L4]","[Paladin Gen4 ChainA L5]","[Paladin Gen4 ChainA L6]","[Paladin Gen4 ChainA L7]","[Paladin Gen4 ChainA L8]","[Paladin Gen4 ChainA L9]","[Paladin Gen4 ChainA L10]"],
+          "ChainB": ["[Paladin Gen4 ChainB L1]","[Paladin Gen4 ChainB L2]","[Paladin Gen4 ChainB L3]","[Paladin Gen4 ChainB L4]","[Paladin Gen4 ChainB L5]","[Paladin Gen4 ChainB L6]","[Paladin Gen4 ChainB L7]","[Paladin Gen4 ChainB L8]","[Paladin Gen4 ChainB L9]","[Paladin Gen4 ChainB L10]"]
+        }
+      },
+      "Gen5": {
+        "generatorName": "[Paladin Gen5 Name]",
+        "chains": {
+          "ChainA": ["[Paladin Gen5 ChainA L1]","[Paladin Gen5 ChainA L2]","[Paladin Gen5 ChainA L3]","[Paladin Gen5 ChainA L4]","[Paladin Gen5 ChainA L5]","[Paladin Gen5 ChainA L6]","[Paladin Gen5 ChainA L7]","[Paladin Gen5 ChainA L8]","[Paladin Gen5 ChainA L9]","[Paladin Gen5 ChainA L10]"],
+          "ChainB": ["[Paladin Gen5 ChainB L1]","[Paladin Gen5 ChainB L2]","[Paladin Gen5 ChainB L3]","[Paladin Gen5 ChainB L4]","[Paladin Gen5 ChainB L5]","[Paladin Gen5 ChainB L6]","[Paladin Gen5 ChainB L7]","[Paladin Gen5 ChainB L8]","[Paladin Gen5 ChainB L9]","[Paladin Gen5 ChainB L10]"]
+        }
+      },
+      "Gen6": {
+        "generatorName": "Wondrous Items",
+        "chains": {
+          "ChainA": ["[Paladin Gen6 ChainA L1]","[Paladin Gen6 ChainA L2]","[Paladin Gen6 ChainA L3]","[Paladin Gen6 ChainA L4]","[Paladin Gen6 ChainA L5]","[Paladin Gen6 ChainA L6]","[Paladin Gen6 ChainA L7]","[Paladin Gen6 ChainA L8]","[Paladin Gen6 ChainA L9]","[Paladin Gen6 ChainA L10]"]
+        }
+      }
     },
-    "rogue": {
-      "className": "Rogue",
-      "skillName": "Execute",
-      "skillDescription": "[Rogue Skill: Instantly completes 1 active encounter without spending the required items.]",
-      "generators": {
-        "Gen0": {
-          "generatorName": "[Rogue Gen0 Name]",
-          "chains": {
-            "ChainA": [
-              "[Rogue Gen0 ChainA L1]", "[Rogue Gen0 ChainA L2]", "[Rogue Gen0 ChainA L3]",
-              "[Rogue Gen0 ChainA L4]", "[Rogue Gen0 ChainA L5]", "[Rogue Gen0 ChainA L6]",
-              "[Rogue Gen0 ChainA L7]", "[Rogue Gen0 ChainA L8]", "[Rogue Gen0 ChainA L9]",
-              "[Rogue Gen0 ChainA L10]"
-            ]
-          }
-        },
-        "Gen1": {
-          "generatorName": "[Rogue Gen1 Name]",
-          "chains": {
-            "ChainA": [
-              "[Rogue Gen1 ChainA L1]", "[Rogue Gen1 ChainA L2]", "[Rogue Gen1 ChainA L3]",
-              "[Rogue Gen1 ChainA L4]", "[Rogue Gen1 ChainA L5]", "[Rogue Gen1 ChainA L6]",
-              "[Rogue Gen1 ChainA L7]", "[Rogue Gen1 ChainA L8]", "[Rogue Gen1 ChainA L9]",
-              "[Rogue Gen1 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Rogue Gen1 ChainB L1]", "[Rogue Gen1 ChainB L2]", "[Rogue Gen1 ChainB L3]",
-              "[Rogue Gen1 ChainB L4]", "[Rogue Gen1 ChainB L5]", "[Rogue Gen1 ChainB L6]",
-              "[Rogue Gen1 ChainB L7]", "[Rogue Gen1 ChainB L8]", "[Rogue Gen1 ChainB L9]",
-              "[Rogue Gen1 ChainB L10]"
-            ]
-          }
-        },
-        "Gen2": {
-          "generatorName": "[Rogue Gen2 Name]",
-          "chains": {
-            "ChainA": [
-              "[Rogue Gen2 ChainA L1]", "[Rogue Gen2 ChainA L2]", "[Rogue Gen2 ChainA L3]",
-              "[Rogue Gen2 ChainA L4]", "[Rogue Gen2 ChainA L5]", "[Rogue Gen2 ChainA L6]",
-              "[Rogue Gen2 ChainA L7]", "[Rogue Gen2 ChainA L8]", "[Rogue Gen2 ChainA L9]",
-              "[Rogue Gen2 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Rogue Gen2 ChainB L1]", "[Rogue Gen2 ChainB L2]", "[Rogue Gen2 ChainB L3]",
-              "[Rogue Gen2 ChainB L4]", "[Rogue Gen2 ChainB L5]", "[Rogue Gen2 ChainB L6]",
-              "[Rogue Gen2 ChainB L7]", "[Rogue Gen2 ChainB L8]", "[Rogue Gen2 ChainB L9]",
-              "[Rogue Gen2 ChainB L10]"
-            ],
-            "ChainC": [
-              "[Rogue Gen2 ChainC L1]", "[Rogue Gen2 ChainC L2]", "[Rogue Gen2 ChainC L3]",
-              "[Rogue Gen2 ChainC L4]", "[Rogue Gen2 ChainC L5]", "[Rogue Gen2 ChainC L6]",
-              "[Rogue Gen2 ChainC L7]", "[Rogue Gen2 ChainC L8]", "[Rogue Gen2 ChainC L9]",
-              "[Rogue Gen2 ChainC L10]"
-            ]
-          }
-        },
-        "Gen3": {
-          "generatorName": "[Rogue Gen3 Name]",
-          "chains": {
-            "ChainA": [
-              "[Rogue Gen3 ChainA L1]", "[Rogue Gen3 ChainA L2]", "[Rogue Gen3 ChainA L3]",
-              "[Rogue Gen3 ChainA L4]", "[Rogue Gen3 ChainA L5]", "[Rogue Gen3 ChainA L6]",
-              "[Rogue Gen3 ChainA L7]", "[Rogue Gen3 ChainA L8]", "[Rogue Gen3 ChainA L9]",
-              "[Rogue Gen3 ChainA L10]"
-            ]
-          }
-        },
-        "Gen4": {
-          "generatorName": "[Rogue Gen4 Name]",
-          "chains": {
-            "ChainA": [
-              "[Rogue Gen4 ChainA L1]", "[Rogue Gen4 ChainA L2]", "[Rogue Gen4 ChainA L3]",
-              "[Rogue Gen4 ChainA L4]", "[Rogue Gen4 ChainA L5]", "[Rogue Gen4 ChainA L6]",
-              "[Rogue Gen4 ChainA L7]", "[Rogue Gen4 ChainA L8]", "[Rogue Gen4 ChainA L9]",
-              "[Rogue Gen4 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Rogue Gen4 ChainB L1]", "[Rogue Gen4 ChainB L2]", "[Rogue Gen4 ChainB L3]",
-              "[Rogue Gen4 ChainB L4]", "[Rogue Gen4 ChainB L5]", "[Rogue Gen4 ChainB L6]",
-              "[Rogue Gen4 ChainB L7]", "[Rogue Gen4 ChainB L8]", "[Rogue Gen4 ChainB L9]",
-              "[Rogue Gen4 ChainB L10]"
-            ]
-          }
-        },
-        "Gen5": {
-          "generatorName": "[Rogue Gen5 Name]",
-          "chains": {
-            "ChainA": [
-              "[Rogue Gen5 ChainA L1]", "[Rogue Gen5 ChainA L2]", "[Rogue Gen5 ChainA L3]",
-              "[Rogue Gen5 ChainA L4]", "[Rogue Gen5 ChainA L5]", "[Rogue Gen5 ChainA L6]",
-              "[Rogue Gen5 ChainA L7]", "[Rogue Gen5 ChainA L8]", "[Rogue Gen5 ChainA L9]",
-              "[Rogue Gen5 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Rogue Gen5 ChainB L1]", "[Rogue Gen5 ChainB L2]", "[Rogue Gen5 ChainB L3]",
-              "[Rogue Gen5 ChainB L4]", "[Rogue Gen5 ChainB L5]", "[Rogue Gen5 ChainB L6]",
-              "[Rogue Gen5 ChainB L7]", "[Rogue Gen5 ChainB L8]", "[Rogue Gen5 ChainB L9]",
-              "[Rogue Gen5 ChainB L10]"
-            ]
-          }
-        },
-        "Gen6": {
-          "generatorName": "Wondrous Items",
-          "chains": {
-            "ChainA": [
-              "[Rogue Gen6 ChainA L1]", "[Rogue Gen6 ChainA L2]", "[Rogue Gen6 ChainA L3]",
-              "[Rogue Gen6 ChainA L4]", "[Rogue Gen6 ChainA L5]", "[Rogue Gen6 ChainA L6]",
-              "[Rogue Gen6 ChainA L7]", "[Rogue Gen6 ChainA L8]", "[Rogue Gen6 ChainA L9]",
-              "[Rogue Gen6 ChainA L10]"
-            ]
-          }
+    "recipes": {
+      "recipe1": "[Paladin Recipe1 Name]",
+      "recipe2": "[Paladin Recipe2 Name]"
+    }
+  },
+  "rogue": {
+    "className": "Rogue",
+    "skillName": "Execute",
+    "skillDescription": "[Rogue Skill: Execute — Instantly completes 1 active encounter without spending the required items.]",
+    "generators": {
+      "Gen0": {
+        "generatorName": "[Rogue Gen0 Name]",
+        "chains": {
+          "ChainA": ["[Rogue Gen0 ChainA L1]","[Rogue Gen0 ChainA L2]","[Rogue Gen0 ChainA L3]","[Rogue Gen0 ChainA L4]","[Rogue Gen0 ChainA L5]","[Rogue Gen0 ChainA L6]","[Rogue Gen0 ChainA L7]","[Rogue Gen0 ChainA L8]","[Rogue Gen0 ChainA L9]","[Rogue Gen0 ChainA L10]"]
         }
       },
-      "recipes": [
-        { "id": "recipe1", "name": "[Rogue Recipe1 Name]" },
-        { "id": "recipe2", "name": "[Rogue Recipe2 Name]" }
-      ]
+      "Gen1": {
+        "generatorName": "[Rogue Gen1 Name]",
+        "chains": {
+          "ChainA": ["[Rogue Gen1 ChainA L1]","[Rogue Gen1 ChainA L2]","[Rogue Gen1 ChainA L3]","[Rogue Gen1 ChainA L4]","[Rogue Gen1 ChainA L5]","[Rogue Gen1 ChainA L6]","[Rogue Gen1 ChainA L7]","[Rogue Gen1 ChainA L8]","[Rogue Gen1 ChainA L9]","[Rogue Gen1 ChainA L10]"],
+          "ChainB": ["[Rogue Gen1 ChainB L1]","[Rogue Gen1 ChainB L2]","[Rogue Gen1 ChainB L3]","[Rogue Gen1 ChainB L4]","[Rogue Gen1 ChainB L5]","[Rogue Gen1 ChainB L6]","[Rogue Gen1 ChainB L7]","[Rogue Gen1 ChainB L8]","[Rogue Gen1 ChainB L9]","[Rogue Gen1 ChainB L10]"]
+        }
+      },
+      "Gen2": {
+        "generatorName": "[Rogue Gen2 Name]",
+        "chains": {
+          "ChainA": ["[Rogue Gen2 ChainA L1]","[Rogue Gen2 ChainA L2]","[Rogue Gen2 ChainA L3]","[Rogue Gen2 ChainA L4]","[Rogue Gen2 ChainA L5]","[Rogue Gen2 ChainA L6]","[Rogue Gen2 ChainA L7]","[Rogue Gen2 ChainA L8]","[Rogue Gen2 ChainA L9]","[Rogue Gen2 ChainA L10]"],
+          "ChainB": ["[Rogue Gen2 ChainB L1]","[Rogue Gen2 ChainB L2]","[Rogue Gen2 ChainB L3]","[Rogue Gen2 ChainB L4]","[Rogue Gen2 ChainB L5]","[Rogue Gen2 ChainB L6]","[Rogue Gen2 ChainB L7]","[Rogue Gen2 ChainB L8]","[Rogue Gen2 ChainB L9]","[Rogue Gen2 ChainB L10]"],
+          "ChainC": ["[Rogue Gen2 ChainC L1]","[Rogue Gen2 ChainC L2]","[Rogue Gen2 ChainC L3]","[Rogue Gen2 ChainC L4]","[Rogue Gen2 ChainC L5]","[Rogue Gen2 ChainC L6]","[Rogue Gen2 ChainC L7]","[Rogue Gen2 ChainC L8]","[Rogue Gen2 ChainC L9]","[Rogue Gen2 ChainC L10]"]
+        }
+      },
+      "Gen3": {
+        "generatorName": "[Rogue Gen3 Name]",
+        "chains": {
+          "ChainA": ["[Rogue Gen3 ChainA L1]","[Rogue Gen3 ChainA L2]","[Rogue Gen3 ChainA L3]","[Rogue Gen3 ChainA L4]","[Rogue Gen3 ChainA L5]","[Rogue Gen3 ChainA L6]","[Rogue Gen3 ChainA L7]","[Rogue Gen3 ChainA L8]","[Rogue Gen3 ChainA L9]","[Rogue Gen3 ChainA L10]"]
+        }
+      },
+      "Gen4": {
+        "generatorName": "[Rogue Gen4 Name]",
+        "chains": {
+          "ChainA": ["[Rogue Gen4 ChainA L1]","[Rogue Gen4 ChainA L2]","[Rogue Gen4 ChainA L3]","[Rogue Gen4 ChainA L4]","[Rogue Gen4 ChainA L5]","[Rogue Gen4 ChainA L6]","[Rogue Gen4 ChainA L7]","[Rogue Gen4 ChainA L8]","[Rogue Gen4 ChainA L9]","[Rogue Gen4 ChainA L10]"],
+          "ChainB": ["[Rogue Gen4 ChainB L1]","[Rogue Gen4 ChainB L2]","[Rogue Gen4 ChainB L3]","[Rogue Gen4 ChainB L4]","[Rogue Gen4 ChainB L5]","[Rogue Gen4 ChainB L6]","[Rogue Gen4 ChainB L7]","[Rogue Gen4 ChainB L8]","[Rogue Gen4 ChainB L9]","[Rogue Gen4 ChainB L10]"]
+        }
+      },
+      "Gen5": {
+        "generatorName": "[Rogue Gen5 Name]",
+        "chains": {
+          "ChainA": ["[Rogue Gen5 ChainA L1]","[Rogue Gen5 ChainA L2]","[Rogue Gen5 ChainA L3]","[Rogue Gen5 ChainA L4]","[Rogue Gen5 ChainA L5]","[Rogue Gen5 ChainA L6]","[Rogue Gen5 ChainA L7]","[Rogue Gen5 ChainA L8]","[Rogue Gen5 ChainA L9]","[Rogue Gen5 ChainA L10]"],
+          "ChainB": ["[Rogue Gen5 ChainB L1]","[Rogue Gen5 ChainB L2]","[Rogue Gen5 ChainB L3]","[Rogue Gen5 ChainB L4]","[Rogue Gen5 ChainB L5]","[Rogue Gen5 ChainB L6]","[Rogue Gen5 ChainB L7]","[Rogue Gen5 ChainB L8]","[Rogue Gen5 ChainB L9]","[Rogue Gen5 ChainB L10]"]
+        }
+      },
+      "Gen6": {
+        "generatorName": "Wondrous Items",
+        "chains": {
+          "ChainA": ["[Rogue Gen6 ChainA L1]","[Rogue Gen6 ChainA L2]","[Rogue Gen6 ChainA L3]","[Rogue Gen6 ChainA L4]","[Rogue Gen6 ChainA L5]","[Rogue Gen6 ChainA L6]","[Rogue Gen6 ChainA L7]","[Rogue Gen6 ChainA L8]","[Rogue Gen6 ChainA L9]","[Rogue Gen6 ChainA L10]"]
+        }
+      }
     },
-    "cleric": {
-      "className": "Cleric",
-      "skillName": "Revitalize",
-      "skillDescription": "[Cleric Skill: Instantly resets the cooldown timers of all generators on the board.]",
-      "generators": {
-        "Gen0": {
-          "generatorName": "[Cleric Gen0 Name]",
-          "chains": {
-            "ChainA": [
-              "[Cleric Gen0 ChainA L1]", "[Cleric Gen0 ChainA L2]", "[Cleric Gen0 ChainA L3]",
-              "[Cleric Gen0 ChainA L4]", "[Cleric Gen0 ChainA L5]", "[Cleric Gen0 ChainA L6]",
-              "[Cleric Gen0 ChainA L7]", "[Cleric Gen0 ChainA L8]", "[Cleric Gen0 ChainA L9]",
-              "[Cleric Gen0 ChainA L10]"
-            ]
-          }
-        },
-        "Gen1": {
-          "generatorName": "[Cleric Gen1 Name]",
-          "chains": {
-            "ChainA": [
-              "[Cleric Gen1 ChainA L1]", "[Cleric Gen1 ChainA L2]", "[Cleric Gen1 ChainA L3]",
-              "[Cleric Gen1 ChainA L4]", "[Cleric Gen1 ChainA L5]", "[Cleric Gen1 ChainA L6]",
-              "[Cleric Gen1 ChainA L7]", "[Cleric Gen1 ChainA L8]", "[Cleric Gen1 ChainA L9]",
-              "[Cleric Gen1 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Cleric Gen1 ChainB L1]", "[Cleric Gen1 ChainB L2]", "[Cleric Gen1 ChainB L3]",
-              "[Cleric Gen1 ChainB L4]", "[Cleric Gen1 ChainB L5]", "[Cleric Gen1 ChainB L6]",
-              "[Cleric Gen1 ChainB L7]", "[Cleric Gen1 ChainB L8]", "[Cleric Gen1 ChainB L9]",
-              "[Cleric Gen1 ChainB L10]"
-            ]
-          }
-        },
-        "Gen2": {
-          "generatorName": "[Cleric Gen2 Name]",
-          "chains": {
-            "ChainA": [
-              "[Cleric Gen2 ChainA L1]", "[Cleric Gen2 ChainA L2]", "[Cleric Gen2 ChainA L3]",
-              "[Cleric Gen2 ChainA L4]", "[Cleric Gen2 ChainA L5]", "[Cleric Gen2 ChainA L6]",
-              "[Cleric Gen2 ChainA L7]", "[Cleric Gen2 ChainA L8]", "[Cleric Gen2 ChainA L9]",
-              "[Cleric Gen2 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Cleric Gen2 ChainB L1]", "[Cleric Gen2 ChainB L2]", "[Cleric Gen2 ChainB L3]",
-              "[Cleric Gen2 ChainB L4]", "[Cleric Gen2 ChainB L5]", "[Cleric Gen2 ChainB L6]",
-              "[Cleric Gen2 ChainB L7]", "[Cleric Gen2 ChainB L8]", "[Cleric Gen2 ChainB L9]",
-              "[Cleric Gen2 ChainB L10]"
-            ],
-            "ChainC": [
-              "[Cleric Gen2 ChainC L1]", "[Cleric Gen2 ChainC L2]", "[Cleric Gen2 ChainC L3]",
-              "[Cleric Gen2 ChainC L4]", "[Cleric Gen2 ChainC L5]", "[Cleric Gen2 ChainC L6]",
-              "[Cleric Gen2 ChainC L7]", "[Cleric Gen2 ChainC L8]", "[Cleric Gen2 ChainC L9]",
-              "[Cleric Gen2 ChainC L10]"
-            ]
-          }
-        },
-        "Gen3": {
-          "generatorName": "[Cleric Gen3 Name]",
-          "chains": {
-            "ChainA": [
-              "[Cleric Gen3 ChainA L1]", "[Cleric Gen3 ChainA L2]", "[Cleric Gen3 ChainA L3]",
-              "[Cleric Gen3 ChainA L4]", "[Cleric Gen3 ChainA L5]", "[Cleric Gen3 ChainA L6]",
-              "[Cleric Gen3 ChainA L7]", "[Cleric Gen3 ChainA L8]", "[Cleric Gen3 ChainA L9]",
-              "[Cleric Gen3 ChainA L10]"
-            ]
-          }
-        },
-        "Gen4": {
-          "generatorName": "[Cleric Gen4 Name]",
-          "chains": {
-            "ChainA": [
-              "[Cleric Gen4 ChainA L1]", "[Cleric Gen4 ChainA L2]", "[Cleric Gen4 ChainA L3]",
-              "[Cleric Gen4 ChainA L4]", "[Cleric Gen4 ChainA L5]", "[Cleric Gen4 ChainA L6]",
-              "[Cleric Gen4 ChainA L7]", "[Cleric Gen4 ChainA L8]", "[Cleric Gen4 ChainA L9]",
-              "[Cleric Gen4 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Cleric Gen4 ChainB L1]", "[Cleric Gen4 ChainB L2]", "[Cleric Gen4 ChainB L3]",
-              "[Cleric Gen4 ChainB L4]", "[Cleric Gen4 ChainB L5]", "[Cleric Gen4 ChainB L6]",
-              "[Cleric Gen4 ChainB L7]", "[Cleric Gen4 ChainB L8]", "[Cleric Gen4 ChainB L9]",
-              "[Cleric Gen4 ChainB L10]"
-            ]
-          }
-        },
-        "Gen5": {
-          "generatorName": "[Cleric Gen5 Name]",
-          "chains": {
-            "ChainA": [
-              "[Cleric Gen5 ChainA L1]", "[Cleric Gen5 ChainA L2]", "[Cleric Gen5 ChainA L3]",
-              "[Cleric Gen5 ChainA L4]", "[Cleric Gen5 ChainA L5]", "[Cleric Gen5 ChainA L6]",
-              "[Cleric Gen5 ChainA L7]", "[Cleric Gen5 ChainA L8]", "[Cleric Gen5 ChainA L9]",
-              "[Cleric Gen5 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Cleric Gen5 ChainB L1]", "[Cleric Gen5 ChainB L2]", "[Cleric Gen5 ChainB L3]",
-              "[Cleric Gen5 ChainB L4]", "[Cleric Gen5 ChainB L5]", "[Cleric Gen5 ChainB L6]",
-              "[Cleric Gen5 ChainB L7]", "[Cleric Gen5 ChainB L8]", "[Cleric Gen5 ChainB L9]",
-              "[Cleric Gen5 ChainB L10]"
-            ]
-          }
-        },
-        "Gen6": {
-          "generatorName": "Wondrous Items",
-          "chains": {
-            "ChainA": [
-              "[Cleric Gen6 ChainA L1]", "[Cleric Gen6 ChainA L2]", "[Cleric Gen6 ChainA L3]",
-              "[Cleric Gen6 ChainA L4]", "[Cleric Gen6 ChainA L5]", "[Cleric Gen6 ChainA L6]",
-              "[Cleric Gen6 ChainA L7]", "[Cleric Gen6 ChainA L8]", "[Cleric Gen6 ChainA L9]",
-              "[Cleric Gen6 ChainA L10]"
-            ]
-          }
+    "recipes": {
+      "recipe1": "[Rogue Recipe1 Name]",
+      "recipe2": "[Rogue Recipe2 Name]"
+    }
+  },
+  "cleric": {
+    "className": "Cleric",
+    "skillName": "Revitalize",
+    "skillDescription": "[Cleric Skill: Revitalize — Instantly resets the cooldown timers of all generators on the board.]",
+    "generators": {
+      "Gen0": {
+        "generatorName": "[Cleric Gen0 Name]",
+        "chains": {
+          "ChainA": ["[Cleric Gen0 ChainA L1]","[Cleric Gen0 ChainA L2]","[Cleric Gen0 ChainA L3]","[Cleric Gen0 ChainA L4]","[Cleric Gen0 ChainA L5]","[Cleric Gen0 ChainA L6]","[Cleric Gen0 ChainA L7]","[Cleric Gen0 ChainA L8]","[Cleric Gen0 ChainA L9]","[Cleric Gen0 ChainA L10]"]
         }
       },
-      "recipes": [
-        { "id": "recipe1", "name": "[Cleric Recipe1 Name]" },
-        { "id": "recipe2", "name": "[Cleric Recipe2 Name]" }
-      ]
+      "Gen1": {
+        "generatorName": "[Cleric Gen1 Name]",
+        "chains": {
+          "ChainA": ["[Cleric Gen1 ChainA L1]","[Cleric Gen1 ChainA L2]","[Cleric Gen1 ChainA L3]","[Cleric Gen1 ChainA L4]","[Cleric Gen1 ChainA L5]","[Cleric Gen1 ChainA L6]","[Cleric Gen1 ChainA L7]","[Cleric Gen1 ChainA L8]","[Cleric Gen1 ChainA L9]","[Cleric Gen1 ChainA L10]"],
+          "ChainB": ["[Cleric Gen1 ChainB L1]","[Cleric Gen1 ChainB L2]","[Cleric Gen1 ChainB L3]","[Cleric Gen1 ChainB L4]","[Cleric Gen1 ChainB L5]","[Cleric Gen1 ChainB L6]","[Cleric Gen1 ChainB L7]","[Cleric Gen1 ChainB L8]","[Cleric Gen1 ChainB L9]","[Cleric Gen1 ChainB L10]"]
+        }
+      },
+      "Gen2": {
+        "generatorName": "[Cleric Gen2 Name]",
+        "chains": {
+          "ChainA": ["[Cleric Gen2 ChainA L1]","[Cleric Gen2 ChainA L2]","[Cleric Gen2 ChainA L3]","[Cleric Gen2 ChainA L4]","[Cleric Gen2 ChainA L5]","[Cleric Gen2 ChainA L6]","[Cleric Gen2 ChainA L7]","[Cleric Gen2 ChainA L8]","[Cleric Gen2 ChainA L9]","[Cleric Gen2 ChainA L10]"],
+          "ChainB": ["[Cleric Gen2 ChainB L1]","[Cleric Gen2 ChainB L2]","[Cleric Gen2 ChainB L3]","[Cleric Gen2 ChainB L4]","[Cleric Gen2 ChainB L5]","[Cleric Gen2 ChainB L6]","[Cleric Gen2 ChainB L7]","[Cleric Gen2 ChainB L8]","[Cleric Gen2 ChainB L9]","[Cleric Gen2 ChainB L10]"],
+          "ChainC": ["[Cleric Gen2 ChainC L1]","[Cleric Gen2 ChainC L2]","[Cleric Gen2 ChainC L3]","[Cleric Gen2 ChainC L4]","[Cleric Gen2 ChainC L5]","[Cleric Gen2 ChainC L6]","[Cleric Gen2 ChainC L7]","[Cleric Gen2 ChainC L8]","[Cleric Gen2 ChainC L9]","[Cleric Gen2 ChainC L10]"]
+        }
+      },
+      "Gen3": {
+        "generatorName": "[Cleric Gen3 Name]",
+        "chains": {
+          "ChainA": ["[Cleric Gen3 ChainA L1]","[Cleric Gen3 ChainA L2]","[Cleric Gen3 ChainA L3]","[Cleric Gen3 ChainA L4]","[Cleric Gen3 ChainA L5]","[Cleric Gen3 ChainA L6]","[Cleric Gen3 ChainA L7]","[Cleric Gen3 ChainA L8]","[Cleric Gen3 ChainA L9]","[Cleric Gen3 ChainA L10]"]
+        }
+      },
+      "Gen4": {
+        "generatorName": "[Cleric Gen4 Name]",
+        "chains": {
+          "ChainA": ["[Cleric Gen4 ChainA L1]","[Cleric Gen4 ChainA L2]","[Cleric Gen4 ChainA L3]","[Cleric Gen4 ChainA L4]","[Cleric Gen4 ChainA L5]","[Cleric Gen4 ChainA L6]","[Cleric Gen4 ChainA L7]","[Cleric Gen4 ChainA L8]","[Cleric Gen4 ChainA L9]","[Cleric Gen4 ChainA L10]"],
+          "ChainB": ["[Cleric Gen4 ChainB L1]","[Cleric Gen4 ChainB L2]","[Cleric Gen4 ChainB L3]","[Cleric Gen4 ChainB L4]","[Cleric Gen4 ChainB L5]","[Cleric Gen4 ChainB L6]","[Cleric Gen4 ChainB L7]","[Cleric Gen4 ChainB L8]","[Cleric Gen4 ChainB L9]","[Cleric Gen4 ChainB L10]"]
+        }
+      },
+      "Gen5": {
+        "generatorName": "[Cleric Gen5 Name]",
+        "chains": {
+          "ChainA": ["[Cleric Gen5 ChainA L1]","[Cleric Gen5 ChainA L2]","[Cleric Gen5 ChainA L3]","[Cleric Gen5 ChainA L4]","[Cleric Gen5 ChainA L5]","[Cleric Gen5 ChainA L6]","[Cleric Gen5 ChainA L7]","[Cleric Gen5 ChainA L8]","[Cleric Gen5 ChainA L9]","[Cleric Gen5 ChainA L10]"],
+          "ChainB": ["[Cleric Gen5 ChainB L1]","[Cleric Gen5 ChainB L2]","[Cleric Gen5 ChainB L3]","[Cleric Gen5 ChainB L4]","[Cleric Gen5 ChainB L5]","[Cleric Gen5 ChainB L6]","[Cleric Gen5 ChainB L7]","[Cleric Gen5 ChainB L8]","[Cleric Gen5 ChainB L9]","[Cleric Gen5 ChainB L10]"]
+        }
+      },
+      "Gen6": {
+        "generatorName": "Wondrous Items",
+        "chains": {
+          "ChainA": ["[Cleric Gen6 ChainA L1]","[Cleric Gen6 ChainA L2]","[Cleric Gen6 ChainA L3]","[Cleric Gen6 ChainA L4]","[Cleric Gen6 ChainA L5]","[Cleric Gen6 ChainA L6]","[Cleric Gen6 ChainA L7]","[Cleric Gen6 ChainA L8]","[Cleric Gen6 ChainA L9]","[Cleric Gen6 ChainA L10]"]
+        }
+      }
     },
-    "wizard": {
-      "className": "Wizard",
-      "skillName": "Time Warp",
-      "skillDescription": "[Wizard Skill: Skips the next 4 hours of generation/cooldown time.]",
-      "generators": {
-        "Gen0": {
-          "generatorName": "[Wizard Gen0 Name]",
-          "chains": {
-            "ChainA": [
-              "[Wizard Gen0 ChainA L1]", "[Wizard Gen0 ChainA L2]", "[Wizard Gen0 ChainA L3]",
-              "[Wizard Gen0 ChainA L4]", "[Wizard Gen0 ChainA L5]", "[Wizard Gen0 ChainA L6]",
-              "[Wizard Gen0 ChainA L7]", "[Wizard Gen0 ChainA L8]", "[Wizard Gen0 ChainA L9]",
-              "[Wizard Gen0 ChainA L10]"
-            ]
-          }
-        },
-        "Gen1": {
-          "generatorName": "[Wizard Gen1 Name]",
-          "chains": {
-            "ChainA": [
-              "[Wizard Gen1 ChainA L1]", "[Wizard Gen1 ChainA L2]", "[Wizard Gen1 ChainA L3]",
-              "[Wizard Gen1 ChainA L4]", "[Wizard Gen1 ChainA L5]", "[Wizard Gen1 ChainA L6]",
-              "[Wizard Gen1 ChainA L7]", "[Wizard Gen1 ChainA L8]", "[Wizard Gen1 ChainA L9]",
-              "[Wizard Gen1 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Wizard Gen1 ChainB L1]", "[Wizard Gen1 ChainB L2]", "[Wizard Gen1 ChainB L3]",
-              "[Wizard Gen1 ChainB L4]", "[Wizard Gen1 ChainB L5]", "[Wizard Gen1 ChainB L6]",
-              "[Wizard Gen1 ChainB L7]", "[Wizard Gen1 ChainB L8]", "[Wizard Gen1 ChainB L9]",
-              "[Wizard Gen1 ChainB L10]"
-            ]
-          }
-        },
-        "Gen2": {
-          "generatorName": "[Wizard Gen2 Name]",
-          "chains": {
-            "ChainA": [
-              "[Wizard Gen2 ChainA L1]", "[Wizard Gen2 ChainA L2]", "[Wizard Gen2 ChainA L3]",
-              "[Wizard Gen2 ChainA L4]", "[Wizard Gen2 ChainA L5]", "[Wizard Gen2 ChainA L6]",
-              "[Wizard Gen2 ChainA L7]", "[Wizard Gen2 ChainA L8]", "[Wizard Gen2 ChainA L9]",
-              "[Wizard Gen2 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Wizard Gen2 ChainB L1]", "[Wizard Gen2 ChainB L2]", "[Wizard Gen2 ChainB L3]",
-              "[Wizard Gen2 ChainB L4]", "[Wizard Gen2 ChainB L5]", "[Wizard Gen2 ChainB L6]",
-              "[Wizard Gen2 ChainB L7]", "[Wizard Gen2 ChainB L8]", "[Wizard Gen2 ChainB L9]",
-              "[Wizard Gen2 ChainB L10]"
-            ],
-            "ChainC": [
-              "[Wizard Gen2 ChainC L1]", "[Wizard Gen2 ChainC L2]", "[Wizard Gen2 ChainC L3]",
-              "[Wizard Gen2 ChainC L4]", "[Wizard Gen2 ChainC L5]", "[Wizard Gen2 ChainC L6]",
-              "[Wizard Gen2 ChainC L7]", "[Wizard Gen2 ChainC L8]", "[Wizard Gen2 ChainC L9]",
-              "[Wizard Gen2 ChainC L10]"
-            ]
-          }
-        },
-        "Gen3": {
-          "generatorName": "[Wizard Gen3 Name]",
-          "chains": {
-            "ChainA": [
-              "[Wizard Gen3 ChainA L1]", "[Wizard Gen3 ChainA L2]", "[Wizard Gen3 ChainA L3]",
-              "[Wizard Gen3 ChainA L4]", "[Wizard Gen3 ChainA L5]", "[Wizard Gen3 ChainA L6]",
-              "[Wizard Gen3 ChainA L7]", "[Wizard Gen3 ChainA L8]", "[Wizard Gen3 ChainA L9]",
-              "[Wizard Gen3 ChainA L10]"
-            ]
-          }
-        },
-        "Gen4": {
-          "generatorName": "[Wizard Gen4 Name]",
-          "chains": {
-            "ChainA": [
-              "[Wizard Gen4 ChainA L1]", "[Wizard Gen4 ChainA L2]", "[Wizard Gen4 ChainA L3]",
-              "[Wizard Gen4 ChainA L4]", "[Wizard Gen4 ChainA L5]", "[Wizard Gen4 ChainA L6]",
-              "[Wizard Gen4 ChainA L7]", "[Wizard Gen4 ChainA L8]", "[Wizard Gen4 ChainA L9]",
-              "[Wizard Gen4 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Wizard Gen4 ChainB L1]", "[Wizard Gen4 ChainB L2]", "[Wizard Gen4 ChainB L3]",
-              "[Wizard Gen4 ChainB L4]", "[Wizard Gen4 ChainB L5]", "[Wizard Gen4 ChainB L6]",
-              "[Wizard Gen4 ChainB L7]", "[Wizard Gen4 ChainB L8]", "[Wizard Gen4 ChainB L9]",
-              "[Wizard Gen4 ChainB L10]"
-            ]
-          }
-        },
-        "Gen5": {
-          "generatorName": "[Wizard Gen5 Name]",
-          "chains": {
-            "ChainA": [
-              "[Wizard Gen5 ChainA L1]", "[Wizard Gen5 ChainA L2]", "[Wizard Gen5 ChainA L3]",
-              "[Wizard Gen5 ChainA L4]", "[Wizard Gen5 ChainA L5]", "[Wizard Gen5 ChainA L6]",
-              "[Wizard Gen5 ChainA L7]", "[Wizard Gen5 ChainA L8]", "[Wizard Gen5 ChainA L9]",
-              "[Wizard Gen5 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Wizard Gen5 ChainB L1]", "[Wizard Gen5 ChainB L2]", "[Wizard Gen5 ChainB L3]",
-              "[Wizard Gen5 ChainB L4]", "[Wizard Gen5 ChainB L5]", "[Wizard Gen5 ChainB L6]",
-              "[Wizard Gen5 ChainB L7]", "[Wizard Gen5 ChainB L8]", "[Wizard Gen5 ChainB L9]",
-              "[Wizard Gen5 ChainB L10]"
-            ]
-          }
-        },
-        "Gen6": {
-          "generatorName": "Wondrous Items",
-          "chains": {
-            "ChainA": [
-              "[Wizard Gen6 ChainA L1]", "[Wizard Gen6 ChainA L2]", "[Wizard Gen6 ChainA L3]",
-              "[Wizard Gen6 ChainA L4]", "[Wizard Gen6 ChainA L5]", "[Wizard Gen6 ChainA L6]",
-              "[Wizard Gen6 ChainA L7]", "[Wizard Gen6 ChainA L8]", "[Wizard Gen6 ChainA L9]",
-              "[Wizard Gen6 ChainA L10]"
-            ]
-          }
+    "recipes": {
+      "recipe1": "[Cleric Recipe1 Name]",
+      "recipe2": "[Cleric Recipe2 Name]"
+    }
+  },
+  "wizard": {
+    "className": "Wizard",
+    "skillName": "Time Warp",
+    "skillDescription": "[Wizard Skill: Time Warp — Skips the next 4 hours of generation/cooldown time.]",
+    "generators": {
+      "Gen0": {
+        "generatorName": "[Wizard Gen0 Name]",
+        "chains": {
+          "ChainA": ["[Wizard Gen0 ChainA L1]","[Wizard Gen0 ChainA L2]","[Wizard Gen0 ChainA L3]","[Wizard Gen0 ChainA L4]","[Wizard Gen0 ChainA L5]","[Wizard Gen0 ChainA L6]","[Wizard Gen0 ChainA L7]","[Wizard Gen0 ChainA L8]","[Wizard Gen0 ChainA L9]","[Wizard Gen0 ChainA L10]"]
         }
       },
-      "recipes": [
-        { "id": "recipe1", "name": "[Wizard Recipe1 Name]" },
-        { "id": "recipe2", "name": "[Wizard Recipe2 Name]" }
-      ]
+      "Gen1": {
+        "generatorName": "[Wizard Gen1 Name]",
+        "chains": {
+          "ChainA": ["[Wizard Gen1 ChainA L1]","[Wizard Gen1 ChainA L2]","[Wizard Gen1 ChainA L3]","[Wizard Gen1 ChainA L4]","[Wizard Gen1 ChainA L5]","[Wizard Gen1 ChainA L6]","[Wizard Gen1 ChainA L7]","[Wizard Gen1 ChainA L8]","[Wizard Gen1 ChainA L9]","[Wizard Gen1 ChainA L10]"],
+          "ChainB": ["[Wizard Gen1 ChainB L1]","[Wizard Gen1 ChainB L2]","[Wizard Gen1 ChainB L3]","[Wizard Gen1 ChainB L4]","[Wizard Gen1 ChainB L5]","[Wizard Gen1 ChainB L6]","[Wizard Gen1 ChainB L7]","[Wizard Gen1 ChainB L8]","[Wizard Gen1 ChainB L9]","[Wizard Gen1 ChainB L10]"]
+        }
+      },
+      "Gen2": {
+        "generatorName": "[Wizard Gen2 Name]",
+        "chains": {
+          "ChainA": ["[Wizard Gen2 ChainA L1]","[Wizard Gen2 ChainA L2]","[Wizard Gen2 ChainA L3]","[Wizard Gen2 ChainA L4]","[Wizard Gen2 ChainA L5]","[Wizard Gen2 ChainA L6]","[Wizard Gen2 ChainA L7]","[Wizard Gen2 ChainA L8]","[Wizard Gen2 ChainA L9]","[Wizard Gen2 ChainA L10]"],
+          "ChainB": ["[Wizard Gen2 ChainB L1]","[Wizard Gen2 ChainB L2]","[Wizard Gen2 ChainB L3]","[Wizard Gen2 ChainB L4]","[Wizard Gen2 ChainB L5]","[Wizard Gen2 ChainB L6]","[Wizard Gen2 ChainB L7]","[Wizard Gen2 ChainB L8]","[Wizard Gen2 ChainB L9]","[Wizard Gen2 ChainB L10]"],
+          "ChainC": ["[Wizard Gen2 ChainC L1]","[Wizard Gen2 ChainC L2]","[Wizard Gen2 ChainC L3]","[Wizard Gen2 ChainC L4]","[Wizard Gen2 ChainC L5]","[Wizard Gen2 ChainC L6]","[Wizard Gen2 ChainC L7]","[Wizard Gen2 ChainC L8]","[Wizard Gen2 ChainC L9]","[Wizard Gen2 ChainC L10]"]
+        }
+      },
+      "Gen3": {
+        "generatorName": "[Wizard Gen3 Name]",
+        "chains": {
+          "ChainA": ["[Wizard Gen3 ChainA L1]","[Wizard Gen3 ChainA L2]","[Wizard Gen3 ChainA L3]","[Wizard Gen3 ChainA L4]","[Wizard Gen3 ChainA L5]","[Wizard Gen3 ChainA L6]","[Wizard Gen3 ChainA L7]","[Wizard Gen3 ChainA L8]","[Wizard Gen3 ChainA L9]","[Wizard Gen3 ChainA L10]"]
+        }
+      },
+      "Gen4": {
+        "generatorName": "[Wizard Gen4 Name]",
+        "chains": {
+          "ChainA": ["[Wizard Gen4 ChainA L1]","[Wizard Gen4 ChainA L2]","[Wizard Gen4 ChainA L3]","[Wizard Gen4 ChainA L4]","[Wizard Gen4 ChainA L5]","[Wizard Gen4 ChainA L6]","[Wizard Gen4 ChainA L7]","[Wizard Gen4 ChainA L8]","[Wizard Gen4 ChainA L9]","[Wizard Gen4 ChainA L10]"],
+          "ChainB": ["[Wizard Gen4 ChainB L1]","[Wizard Gen4 ChainB L2]","[Wizard Gen4 ChainB L3]","[Wizard Gen4 ChainB L4]","[Wizard Gen4 ChainB L5]","[Wizard Gen4 ChainB L6]","[Wizard Gen4 ChainB L7]","[Wizard Gen4 ChainB L8]","[Wizard Gen4 ChainB L9]","[Wizard Gen4 ChainB L10]"]
+        }
+      },
+      "Gen5": {
+        "generatorName": "[Wizard Gen5 Name]",
+        "chains": {
+          "ChainA": ["[Wizard Gen5 ChainA L1]","[Wizard Gen5 ChainA L2]","[Wizard Gen5 ChainA L3]","[Wizard Gen5 ChainA L4]","[Wizard Gen5 ChainA L5]","[Wizard Gen5 ChainA L6]","[Wizard Gen5 ChainA L7]","[Wizard Gen5 ChainA L8]","[Wizard Gen5 ChainA L9]","[Wizard Gen5 ChainA L10]"],
+          "ChainB": ["[Wizard Gen5 ChainB L1]","[Wizard Gen5 ChainB L2]","[Wizard Gen5 ChainB L3]","[Wizard Gen5 ChainB L4]","[Wizard Gen5 ChainB L5]","[Wizard Gen5 ChainB L6]","[Wizard Gen5 ChainB L7]","[Wizard Gen5 ChainB L8]","[Wizard Gen5 ChainB L9]","[Wizard Gen5 ChainB L10]"]
+        }
+      },
+      "Gen6": {
+        "generatorName": "Wondrous Items",
+        "chains": {
+          "ChainA": ["[Wizard Gen6 ChainA L1]","[Wizard Gen6 ChainA L2]","[Wizard Gen6 ChainA L3]","[Wizard Gen6 ChainA L4]","[Wizard Gen6 ChainA L5]","[Wizard Gen6 ChainA L6]","[Wizard Gen6 ChainA L7]","[Wizard Gen6 ChainA L8]","[Wizard Gen6 ChainA L9]","[Wizard Gen6 ChainA L10]"]
+        }
+      }
     },
-    "bard": {
-      "className": "Bard",
-      "skillName": "Buff",
-      "skillDescription": "[Bard Skill: Increases the level of up to 10 selected items on the board by 1 (not generators, not L10, not recipe items).]",
-      "generators": {
-        "Gen0": {
-          "generatorName": "[Bard Gen0 Name]",
-          "chains": {
-            "ChainA": [
-              "[Bard Gen0 ChainA L1]", "[Bard Gen0 ChainA L2]", "[Bard Gen0 ChainA L3]",
-              "[Bard Gen0 ChainA L4]", "[Bard Gen0 ChainA L5]", "[Bard Gen0 ChainA L6]",
-              "[Bard Gen0 ChainA L7]", "[Bard Gen0 ChainA L8]", "[Bard Gen0 ChainA L9]",
-              "[Bard Gen0 ChainA L10]"
-            ]
-          }
-        },
-        "Gen1": {
-          "generatorName": "[Bard Gen1 Name]",
-          "chains": {
-            "ChainA": [
-              "[Bard Gen1 ChainA L1]", "[Bard Gen1 ChainA L2]", "[Bard Gen1 ChainA L3]",
-              "[Bard Gen1 ChainA L4]", "[Bard Gen1 ChainA L5]", "[Bard Gen1 ChainA L6]",
-              "[Bard Gen1 ChainA L7]", "[Bard Gen1 ChainA L8]", "[Bard Gen1 ChainA L9]",
-              "[Bard Gen1 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Bard Gen1 ChainB L1]", "[Bard Gen1 ChainB L2]", "[Bard Gen1 ChainB L3]",
-              "[Bard Gen1 ChainB L4]", "[Bard Gen1 ChainB L5]", "[Bard Gen1 ChainB L6]",
-              "[Bard Gen1 ChainB L7]", "[Bard Gen1 ChainB L8]", "[Bard Gen1 ChainB L9]",
-              "[Bard Gen1 ChainB L10]"
-            ]
-          }
-        },
-        "Gen2": {
-          "generatorName": "[Bard Gen2 Name]",
-          "chains": {
-            "ChainA": [
-              "[Bard Gen2 ChainA L1]", "[Bard Gen2 ChainA L2]", "[Bard Gen2 ChainA L3]",
-              "[Bard Gen2 ChainA L4]", "[Bard Gen2 ChainA L5]", "[Bard Gen2 ChainA L6]",
-              "[Bard Gen2 ChainA L7]", "[Bard Gen2 ChainA L8]", "[Bard Gen2 ChainA L9]",
-              "[Bard Gen2 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Bard Gen2 ChainB L1]", "[Bard Gen2 ChainB L2]", "[Bard Gen2 ChainB L3]",
-              "[Bard Gen2 ChainB L4]", "[Bard Gen2 ChainB L5]", "[Bard Gen2 ChainB L6]",
-              "[Bard Gen2 ChainB L7]", "[Bard Gen2 ChainB L8]", "[Bard Gen2 ChainB L9]",
-              "[Bard Gen2 ChainB L10]"
-            ],
-            "ChainC": [
-              "[Bard Gen2 ChainC L1]", "[Bard Gen2 ChainC L2]", "[Bard Gen2 ChainC L3]",
-              "[Bard Gen2 ChainC L4]", "[Bard Gen2 ChainC L5]", "[Bard Gen2 ChainC L6]",
-              "[Bard Gen2 ChainC L7]", "[Bard Gen2 ChainC L8]", "[Bard Gen2 ChainC L9]",
-              "[Bard Gen2 ChainC L10]"
-            ]
-          }
-        },
-        "Gen3": {
-          "generatorName": "[Bard Gen3 Name]",
-          "chains": {
-            "ChainA": [
-              "[Bard Gen3 ChainA L1]", "[Bard Gen3 ChainA L2]", "[Bard Gen3 ChainA L3]",
-              "[Bard Gen3 ChainA L4]", "[Bard Gen3 ChainA L5]", "[Bard Gen3 ChainA L6]",
-              "[Bard Gen3 ChainA L7]", "[Bard Gen3 ChainA L8]", "[Bard Gen3 ChainA L9]",
-              "[Bard Gen3 ChainA L10]"
-            ]
-          }
-        },
-        "Gen4": {
-          "generatorName": "[Bard Gen4 Name]",
-          "chains": {
-            "ChainA": [
-              "[Bard Gen4 ChainA L1]", "[Bard Gen4 ChainA L2]", "[Bard Gen4 ChainA L3]",
-              "[Bard Gen4 ChainA L4]", "[Bard Gen4 ChainA L5]", "[Bard Gen4 ChainA L6]",
-              "[Bard Gen4 ChainA L7]", "[Bard Gen4 ChainA L8]", "[Bard Gen4 ChainA L9]",
-              "[Bard Gen4 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Bard Gen4 ChainB L1]", "[Bard Gen4 ChainB L2]", "[Bard Gen4 ChainB L3]",
-              "[Bard Gen4 ChainB L4]", "[Bard Gen4 ChainB L5]", "[Bard Gen4 ChainB L6]",
-              "[Bard Gen4 ChainB L7]", "[Bard Gen4 ChainB L8]", "[Bard Gen4 ChainB L9]",
-              "[Bard Gen4 ChainB L10]"
-            ]
-          }
-        },
-        "Gen5": {
-          "generatorName": "[Bard Gen5 Name]",
-          "chains": {
-            "ChainA": [
-              "[Bard Gen5 ChainA L1]", "[Bard Gen5 ChainA L2]", "[Bard Gen5 ChainA L3]",
-              "[Bard Gen5 ChainA L4]", "[Bard Gen5 ChainA L5]", "[Bard Gen5 ChainA L6]",
-              "[Bard Gen5 ChainA L7]", "[Bard Gen5 ChainA L8]", "[Bard Gen5 ChainA L9]",
-              "[Bard Gen5 ChainA L10]"
-            ],
-            "ChainB": [
-              "[Bard Gen5 ChainB L1]", "[Bard Gen5 ChainB L2]", "[Bard Gen5 ChainB L3]",
-              "[Bard Gen5 ChainB L4]", "[Bard Gen5 ChainB L5]", "[Bard Gen5 ChainB L6]",
-              "[Bard Gen5 ChainB L7]", "[Bard Gen5 ChainB L8]", "[Bard Gen5 ChainB L9]",
-              "[Bard Gen5 ChainB L10]"
-            ]
-          }
-        },
-        "Gen6": {
-          "generatorName": "Wondrous Items",
-          "chains": {
-            "ChainA": [
-              "[Bard Gen6 ChainA L1]", "[Bard Gen6 ChainA L2]", "[Bard Gen6 ChainA L3]",
-              "[Bard Gen6 ChainA L4]", "[Bard Gen6 ChainA L5]", "[Bard Gen6 ChainA L6]",
-              "[Bard Gen6 ChainA L7]", "[Bard Gen6 ChainA L8]", "[Bard Gen6 ChainA L9]",
-              "[Bard Gen6 ChainA L10]"
-            ]
-          }
+    "recipes": {
+      "recipe1": "[Wizard Recipe1 Name]",
+      "recipe2": "[Wizard Recipe2 Name]"
+    }
+  },
+  "bard": {
+    "className": "Bard",
+    "skillName": "Buff",
+    "skillDescription": "[Bard Skill: Buff — Increases the level of up to 10 selected items on the board by 1.]",
+    "generators": {
+      "Gen0": {
+        "generatorName": "[Bard Gen0 Name]",
+        "chains": {
+          "ChainA": ["[Bard Gen0 ChainA L1]","[Bard Gen0 ChainA L2]","[Bard Gen0 ChainA L3]","[Bard Gen0 ChainA L4]","[Bard Gen0 ChainA L5]","[Bard Gen0 ChainA L6]","[Bard Gen0 ChainA L7]","[Bard Gen0 ChainA L8]","[Bard Gen0 ChainA L9]","[Bard Gen0 ChainA L10]"]
         }
       },
-      "recipes": [
-        { "id": "recipe1", "name": "[Bard Recipe1 Name]" },
-        { "id": "recipe2", "name": "[Bard Recipe2 Name]" }
-      ]
+      "Gen1": {
+        "generatorName": "[Bard Gen1 Name]",
+        "chains": {
+          "ChainA": ["[Bard Gen1 ChainA L1]","[Bard Gen1 ChainA L2]","[Bard Gen1 ChainA L3]","[Bard Gen1 ChainA L4]","[Bard Gen1 ChainA L5]","[Bard Gen1 ChainA L6]","[Bard Gen1 ChainA L7]","[Bard Gen1 ChainA L8]","[Bard Gen1 ChainA L9]","[Bard Gen1 ChainA L10]"],
+          "ChainB": ["[Bard Gen1 ChainB L1]","[Bard Gen1 ChainB L2]","[Bard Gen1 ChainB L3]","[Bard Gen1 ChainB L4]","[Bard Gen1 ChainB L5]","[Bard Gen1 ChainB L6]","[Bard Gen1 ChainB L7]","[Bard Gen1 ChainB L8]","[Bard Gen1 ChainB L9]","[Bard Gen1 ChainB L10]"]
+        }
+      },
+      "Gen2": {
+        "generatorName": "[Bard Gen2 Name]",
+        "chains": {
+          "ChainA": ["[Bard Gen2 ChainA L1]","[Bard Gen2 ChainA L2]","[Bard Gen2 ChainA L3]","[Bard Gen2 ChainA L4]","[Bard Gen2 ChainA L5]","[Bard Gen2 ChainA L6]","[Bard Gen2 ChainA L7]","[Bard Gen2 ChainA L8]","[Bard Gen2 ChainA L9]","[Bard Gen2 ChainA L10]"],
+          "ChainB": ["[Bard Gen2 ChainB L1]","[Bard Gen2 ChainB L2]","[Bard Gen2 ChainB L3]","[Bard Gen2 ChainB L4]","[Bard Gen2 ChainB L5]","[Bard Gen2 ChainB L6]","[Bard Gen2 ChainB L7]","[Bard Gen2 ChainB L8]","[Bard Gen2 ChainB L9]","[Bard Gen2 ChainB L10]"],
+          "ChainC": ["[Bard Gen2 ChainC L1]","[Bard Gen2 ChainC L2]","[Bard Gen2 ChainC L3]","[Bard Gen2 ChainC L4]","[Bard Gen2 ChainC L5]","[Bard Gen2 ChainC L6]","[Bard Gen2 ChainC L7]","[Bard Gen2 ChainC L8]","[Bard Gen2 ChainC L9]","[Bard Gen2 ChainC L10]"]
+        }
+      },
+      "Gen3": {
+        "generatorName": "[Bard Gen3 Name]",
+        "chains": {
+          "ChainA": ["[Bard Gen3 ChainA L1]","[Bard Gen3 ChainA L2]","[Bard Gen3 ChainA L3]","[Bard Gen3 ChainA L4]","[Bard Gen3 ChainA L5]","[Bard Gen3 ChainA L6]","[Bard Gen3 ChainA L7]","[Bard Gen3 ChainA L8]","[Bard Gen3 ChainA L9]","[Bard Gen3 ChainA L10]"]
+        }
+      },
+      "Gen4": {
+        "generatorName": "[Bard Gen4 Name]",
+        "chains": {
+          "ChainA": ["[Bard Gen4 ChainA L1]","[Bard Gen4 ChainA L2]","[Bard Gen4 ChainA L3]","[Bard Gen4 ChainA L4]","[Bard Gen4 ChainA L5]","[Bard Gen4 ChainA L6]","[Bard Gen4 ChainA L7]","[Bard Gen4 ChainA L8]","[Bard Gen4 ChainA L9]","[Bard Gen4 ChainA L10]"],
+          "ChainB": ["[Bard Gen4 ChainB L1]","[Bard Gen4 ChainB L2]","[Bard Gen4 ChainB L3]","[Bard Gen4 ChainB L4]","[Bard Gen4 ChainB L5]","[Bard Gen4 ChainB L6]","[Bard Gen4 ChainB L7]","[Bard Gen4 ChainB L8]","[Bard Gen4 ChainB L9]","[Bard Gen4 ChainB L10]"]
+        }
+      },
+      "Gen5": {
+        "generatorName": "[Bard Gen5 Name]",
+        "chains": {
+          "ChainA": ["[Bard Gen5 ChainA L1]","[Bard Gen5 ChainA L2]","[Bard Gen5 ChainA L3]","[Bard Gen5 ChainA L4]","[Bard Gen5 ChainA L5]","[Bard Gen5 ChainA L6]","[Bard Gen5 ChainA L7]","[Bard Gen5 ChainA L8]","[Bard Gen5 ChainA L9]","[Bard Gen5 ChainA L10]"],
+          "ChainB": ["[Bard Gen5 ChainB L1]","[Bard Gen5 ChainB L2]","[Bard Gen5 ChainB L3]","[Bard Gen5 ChainB L4]","[Bard Gen5 ChainB L5]","[Bard Gen5 ChainB L6]","[Bard Gen5 ChainB L7]","[Bard Gen5 ChainB L8]","[Bard Gen5 ChainB L9]","[Bard Gen5 ChainB L10]"]
+        }
+      },
+      "Gen6": {
+        "generatorName": "Wondrous Items",
+        "chains": {
+          "ChainA": ["[Bard Gen6 ChainA L1]","[Bard Gen6 ChainA L2]","[Bard Gen6 ChainA L3]","[Bard Gen6 ChainA L4]","[Bard Gen6 ChainA L5]","[Bard Gen6 ChainA L6]","[Bard Gen6 ChainA L7]","[Bard Gen6 ChainA L8]","[Bard Gen6 ChainA L9]","[Bard Gen6 ChainA L10]"]
+        }
+      }
+    },
+    "recipes": {
+      "recipe1": "[Bard Recipe1 Name]",
+      "recipe2": "[Bard Recipe2 Name]"
     }
   }
 }

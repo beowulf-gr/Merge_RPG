@@ -1,26 +1,53 @@
 {
   "ui": {
-    "tapGenerator": "[UI: Tap Generator]",
-    "mergeItems": "[UI: Merge Items]",
-    "completeEncounter": "[UI: Complete Encounter]",
-    "dismissEncounter": "[UI: Dismiss Encounter]",
-    "orderBoard": "[UI: Order Board]",
-    "gold": "[UI: Gold]",
-    "xp": "[UI: XP]",
-    "playerLevel": "[UI: Player Level]",
-    "inventory": "[UI: Inventory]",
-    "settings": "[UI: Settings]",
-    "castle": "[UI: Castle]",
-    "upgrades": "[UI: Upgrades]",
-    "dailyShop": "[UI: Daily Shop]",
-    "classSkill": "[UI: Class Skill]",
-    "boardFull": "[UI: Board Full]",
-    "noCharges": "[UI: No Charges]",
-    "confirmDelete": "[UI: Confirm Delete]",
-    "encounterComplete": "[UI: Encounter Complete]",
-    "newEncounter": "[UI: New Encounter]",
-    "skillReady": "[UI: Skill Ready]",
-    "genUnlocked": "[UI: Generator Unlocked]"
+    "appTitle": "Merge RPG",
+    "chooseClassTitle": "Choose your class",
+    "chooseClassHint": "Your class changes item names and your class skill. The economy is the same for every class.",
+    "playAs": "Play as {class}",
+    "tapGenerator": "Tap to spawn an item",
+    "mergeItems": "Drag identical items together to merge them",
+    "boardHint": "Tap a generator to spawn items. Drag identical items together to merge.",
+    "orderBoard": "Encounters",
+    "completeEncounter": "Complete",
+    "dismissEncounter": "Dismiss",
+    "difficultyEasy": "Easy",
+    "difficultyMedium": "Medium",
+    "difficultyHard": "Hard",
+    "difficultyDeadly": "Deadly",
+    "rewards": "{gold} Gold · {xp} XP",
+    "gold": "Gold",
+    "xp": "XP",
+    "playerLevel": "Level",
+    "itemLevel": "Level {level}",
+    "recipeItem": "Recipe item",
+    "generator": "Generator",
+    "charges": "{charges} / {max} charges",
+    "chargesInfinite": "Unlimited charges",
+    "nextCharge": "Next charge in {time}",
+    "chargesFull": "Fully charged",
+    "inventory": "Inventory",
+    "settings": "Settings",
+    "castle": "Castle",
+    "upgrades": "Upgrades",
+    "dailyShop": "Daily Shop",
+    "classSkill": "Class Skill",
+    "boardFull": "The board is full",
+    "noCharges": "Out of charges, recharging",
+    "mergeCrit": "Critical merge! You got two.",
+    "crafted": "Crafted {item}",
+    "sell": "Sell",
+    "sellTitle": "The Merchant",
+    "sellBody": "The merchant offers {gold} Gold for your {item}.",
+    "sellConfirm": "Sell for {gold} Gold",
+    "sellCancel": "Keep it",
+    "sold": "Sold for {gold} Gold",
+    "cannotSellGenerator": "Generators can't be sold",
+    "confirmDelete": "Delete this item? You get nothing for it.",
+    "encounterComplete": "Encounter complete: +{gold} Gold, +{xp} XP",
+    "encounterNotReady": "You don't have all the items yet",
+    "newEncounter": "New encounter",
+    "skillReady": "Skill ready",
+    "genUnlocked": "New generator unlocked"
   },
   "paladin": {
     "className": "Paladin",
@@ -78,7 +105,7 @@
     "recipes": {
       "recipe1": "[Paladin Recipe1 Name]",
       "recipe2": "[Paladin Recipe2 Name]"
-    }
+  }
   },
   "rogue": {
     "className": "Rogue",
@@ -136,7 +163,7 @@
     "recipes": {
       "recipe1": "[Rogue Recipe1 Name]",
       "recipe2": "[Rogue Recipe2 Name]"
-    }
+  }
   },
   "cleric": {
     "className": "Cleric",
@@ -194,7 +221,7 @@
     "recipes": {
       "recipe1": "[Cleric Recipe1 Name]",
       "recipe2": "[Cleric Recipe2 Name]"
-    }
+  }
   },
   "wizard": {
     "className": "Wizard",
@@ -252,7 +279,7 @@
     "recipes": {
       "recipe1": "[Wizard Recipe1 Name]",
       "recipe2": "[Wizard Recipe2 Name]"
-    }
+  }
   },
   "bard": {
     "className": "Bard",
@@ -310,6 +337,6 @@
     "recipes": {
       "recipe1": "[Bard Recipe1 Name]",
       "recipe2": "[Bard Recipe2 Name]"
-    }
+  }
   }
 }
